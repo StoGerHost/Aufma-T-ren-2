@@ -1,0 +1,3796 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<link rel="apple-touch-icon" sizes="180x180" href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAALQAAAC0CAIAAACyr5FlAAABWGlDQ1BJQ0MgUHJvZmlsZQAAeJx9kLFLw1AQxr9WpaB1EB0cHDKJQ5SSCro4tBVEcQhVweqUvqapkMZHkiIFN/+Bgv+BCs5uFoc6OjgIopPo5uSk4KLleS+JpCJ6j+N+fO+74zggOW5wbvcDqDu+W1zKK5ulLSX1jAS9IAzm8Zyur0r+rj/j/T703k7LWb///43Biukxqp+UGcZdH0ioxPqezyXvE4+5tBRxS7IV8onkcsjngWe9WCC+JlZYzagQvxCr5R7d6uG63WDRDnL7tOlsrMk5lBNYxA48cNgw0IQCHdk//LOBv4BdcjfhUp+FGnzqyZEiJ5jEy3DAMAOVWEOGUpN3ju53F91PjbWDJ2ChI4S4iLWVDnA2Rydrx9rUPDAyBFy1ueEagdRHmaxWgddTYLgEjN5Qz7ZXzWrh9uk8MPAoxNskkDoEui0hPo6E6B5T8wNw6XwBA6diE8HYWhMAAAtySURBVHic7d1dbFvlHcfx//8559jHbyQdbfqSxqQlIm0i8aasyijQQQVilKZlaiexRbsAcdtNXGy7gxvuGBeruGKiSaHtgnYD2gRoCCRATBBWWgptU1HR0ZS0CSSOE9f2eXmeXZzUTUuepoPE9hP9PlIR2G782P76Oa/ksFKKAOYiaj0AqF+IA7QQB2ghDtBCHKCFOEALcYAW4gAtxAFaiAO0EAdoIQ7QQhygZdd6ANdl6R06ZuZaD2F+vPTed1goBswcQRAMD5/1yh4REyma9bVTSs2+sdI5c3T75cdUvqizHjP7J1T+ECmqfF2YLz0kuj96Kp75IczRA/nKx1zxfZv1vJUHkyXE6uY1yWTyx785i6qu41BKMXOhUHjjn/8gZsdxpJREJISQUvHM58jMMx/XrDlwJojZH8mcz3DNe4lI8Uwgl2+69GxX/ae65s+Z+VFKkWDO5Sa39+xo39AevcBr/q1aqus4Klw3+fAj25Yt+0kYhvX8bs4rGvzfBwbCMKj1WOZnRhyKyHGcWCxW64EsDBZCkQGrembEEc3/QRD8+8MPp/KTimatX5iBicm2rTvu7Fq+YrkpGwGGxKFIsPB9//OjR9dmW1LpjArlPIv4esLELPjzo0daW9etaFpBiGPBsaJEIvnz+7ZmbsjUeiw/xNjoqBlRXGJSHIpJKlUsXkylU3W+nj+nIAjIhFWNCpPiiAghhBAmxmEcHFupKqWUKWujhDiqLObEol1hRkx65i1WzGXb9ttv/+t+UvF4TJowfyCO6rFs6/Dh/7SuW287thFbs1isVI9S5LpuzHFMCIMIcVSZxAopLA2IA7QQR1WFYRgqyZfPLKpriKN6At//5aO7un66qVQqGbF7F3FUj5Ry3fp1jQ0NYShNaANxVJfnlZVSbMjxN8RRVcxsxAIlgjhAC3GAFuIALcQBWogDtBAHaCEO0EIcoIU4QAtxgBbiAC3EAVqIA7QQB2ghDtBCHKCFOEALcYAW4gAtxAFaiAO0EAdoIQ7QQhyghThAC3GAFuIALcQBWogDtBAHaCEO0EIcoIU4QAtxgBbiAC3EAVqIA7QQB2ghDtBCHKCFOEALcYAW4gAtxAFaiAO0EEdVGXT1P0IcVWZZFhlysRVCHNXEzNNTBT8ImNmIQIy/InU0URtxhRsn5gwM/O1i6WLCjRuxfDF45qhkwcxGvNdEPF3Ily4WiYURyxaDZw5mDsNwbGyssbHBdRNSSt3D6mdesSxbCKvWo7hepsbBzCMjI/v7+86e/bqxsfHXv+nt6Ois9aDmp5QyYs6ImBdHtADxff/ll/uPHfssk8mcPXt2f3/fffdtZRKzr+XLREEQ3H7nHatXr1ZK1cP8UVfT2LzMiyP65o2Pj58bPpdOp4kolUqNj4+/9NJfr3qcEKJQKPzhj3+qnzh83w+CoNajuF4mxkFElEqlEgl3eiqfSCY9z3Mc5+6777GEpWZN2syiXC41rWii+ticUUqtWrWqcVljLjdhxOXKzYsj+pjT6fTDDz/S379vamqKmbdte2THzkfn/Vu15Xve7l2/2tjZMXTiJIvaj2de5sURUUrdu2XLmubmEyeOZ7PZ2267PbqxHiK4BsuyiFhFf+qeqXEQkVKqra2tra2tckudl0FE0VKPiVS9j5TI6DiYWUoZzRZCGLw3r24ZHIdSqtJE/S9QTGTwF46Zfc/75ptvLhYKKGMxmDpzMPPZ/37d17dvdOxCOpPp7f1tZ2cn5o+FZd7MUdlDeuDgK0OnTgZBcG74XH//vnx+0pwjcGYwL46ojvHvxkdGRjKZNBFlMulvx0aHh4fJtFOt6pyBcTARUSqdcl23VCrbtu35fjzuNjY2kglbswYxL47KHtKdO3cm3EQul1NS9vT0rFnTjHWOhWXqCqlS6md3bW5e23Lq1KmWtWvbN2wgTBsLzdQ4iEgplc1ms9lsrQeyZBkcR7RtopRiIsYe0kVgcBxk2rkzxsEXDrQQB2ghDtBCHKCFOEALcYAW4gAtxAFaiAO0EAdoIQ7QQhyghThAC3GAFuIALcQBWogDtBAHaCEO0EIcoIU4QAtxgBbiAC3EAVqIA7QQB2ghDtBCHKCFOEALcYAW4gAtxAFaiAO0EAdoIY6qin6JWa1Hcb0QR1XF43FmIy7EQ2T6L4wzixDis6OfpdMZ27aMuH4o4qgex3HefPONVDoZj8eMWLhgsVI9iigWj1mWrRQbcelhxFFVSikTqpiBOEALcVSVWb9yGXFUDxOVSyXf99mEy1ET4qimIAjuuefe9g0bfL9sxPyBOKonDMO77tqcvekmL/CMuJY94qiqctlTSmGxAnNgQcxMhuSBOEALcYAW4gCt/+PAW+VYkRGbYfDjzR/HzEX2rty1J6U0a2cf/ADzxCGlFEJEERQKhXK57DhOJpMRQlTurcYwoRauFUf02ReLxffff//w4cOjo6NRHDfeeOOtt966ZcuWxsZGXAR6CdPGEZVx4sSJvr6+4eFhx3Fs2xZCeJ43OTk5NDT0zjvvPPbYY93d3Zg/lip7zlOSlFJCiCNHjuzdu1dK2dDQEK1kRPdalpVIJAqFwgsvvFAoFLZu3Tr73gUUja3yz9n/YsSZVN93+VWYcLKxPeeHysyjo6MvvviisITrulErpVIpisB1XSKKx+O2bR84cKClpeWWW25ZjMFFY7Ntm5mdmBOzHWa2bcfQdWHBwrIdZiYhbLbq/1XYk7mcUlfszJVKWpZ94JVXvhv7Np3JTJemi6ViEATbtm3bvHnz8ePHDx48KJhd143FYuViaX9//1NPPSWERQt9NEkpJSyRz+f9wLtw4YIbd72gPDp6QcowDMM6f2evwsxlv5SbGJ+Y+M73vanp/FR+KgyCen4VvL+v72LxomBBiolIkXJse3xi4rXXXhNCSCUtYe35/e/a29vb2tpisRgRnTx58tzw8PN/fn5ycjLmOKVS+aFfPJTNZsvlsuCFXvlgkjIslUsxyyFmzy/btiOERUou8BMtLiYmz/csy7Jtyyt7tuPE7LhSsp4Pz/L5kZEwlJURSinj8fi777776sCrN9yQmcjldu3a1d3dfejQISnl9PR0IpEQQmzfvj03kdu79y/Lli3L56e2br1/9+7dpXJ5MdZMmYiFiM6+ZMFmnYY5GzNHa1DMPLPCUb9hEBHZK1et+v6tYRgm08l0JlP2vM7Ozk8++eSjjz5qaWnp6Og4ffr0mTNn0un09u3bb2hoSKZSisgPguUrVlR/9LCort5aibZL8/m8kioIAtu2BwcHC4VCJpN5/PHHu7q6vvrqq6effjqRSBSLRaWUlFIpNTU1VdmRWqtXAgvu6q2VaBU62h5RSrmu+/HHH1uWFY/Hoxtd17Usa3Bw8Msvv4w2ZJRS0f/lRzjssrTMvRNs5cqVSinLsvL5/JNPPnnmzJnXX39937593d3dR48eXb16dUdHxwcffBA9WErZ1NRERJg5lpir1x+jT3fjxo3xeDxaZJRKpa6urtbW1mhFdWho6IEHHujt7W1ubvY8Lzry0tnZWYvBw+Li7++ki2557rnnvvjiC9d1Hcd54oknmpqahBCDg4MDAwOtra3ZbPbTTz9VSvm+39TU9Mwzz8Tj8VqMHxbRHHFE66SnT59+9tlnY7GYlNLzvFQqFd0lpQyCwPO8ZDIphJiamtqzZ8+mTZtwhGXpmePjFEJIKW+++ebe3t7p6WkiSqVSvu/7vh+GIRHFYrGGhgZmzuVyPT09KGOpmmPmiESf93vvvXfo0KHp6enoSAoRRZuvpVIpFovt2LGjp6cHZSxV2jjoUh/nz59/6623jh07Njk5GQSBZVmZTKa9vf3BBx9cv349tlCWsGvFQbPO9SqXy2NjY8ViMR6PL1++PJlMEs4EW+rmiYMunXZwVQRSSiJCGUvb/wB+RZJLVla/0wAAAABJRU5ErkJggg==">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Türblatt Aufmaß – Aufnahmeprotokoll</title>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+<link rel="manifest" href="data:application/json,{%22name%22:%22Aufma%C3%9Fprotokoll%22,%22short_name%22:%22Aufma%C3%9F%22,%22start_url%22:%22.%22,%22display%22:%22standalone%22,%22background_color%22:%22%23F2F4F7%22,%22theme_color%22:%22%23001B43%22}">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Aufmaß">
+<style>
+  :root {
+    --bg:            #F2F4F7;
+    --surface:       #FFFFFF;
+    --border:        #D2DAE3;
+    --border-strong: #8BA3BA;
+    --accent:        #001B43;
+    --accent-mid:    #1A2D44;
+    --accent-lt:     #EEF2F8;
+    --orange:        #D95E1F;
+    --text:          #1A2D44;
+    --muted:         #6B7A8D;
+    --check:         #001B43;
+    --field-bg:      #F8FAFB;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+
+  body {
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    font-size: 13px;
+    line-height: 1.5;
+    padding: 24px 16px 80px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HEADER */
+  .doc-header {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: start;
+    gap: 16px;
+    background: #fff;
+    padding: 20px 24px 0;
+    border-radius: 6px 6px 0 0;
+  }
+  .hdr-bar-row { display: flex; gap: 5px; margin-bottom: 14px; }
+  .hdr-bar { width: 5px; border-radius: 2px; }
+  .hdr-bar.b1 { background: #001B43; height: 36px; }
+  .hdr-bar.b2 { background: #FFC72C; height: 26px; align-self: flex-end; }
+  .hdr-bar.b3 { background: #6B7A8D; height: 18px; align-self: flex-end; }
+  .hdr-titles { padding-bottom: 14px; }
+  .doc-header h1 { font-size: 19px; font-weight: 800; letter-spacing: -0.03em; color: var(--accent); }
+  .doc-header p { font-size: 12px; color: var(--muted); margin-top: 3px; }
+  .hdr-stripe { height: 3px; background: linear-gradient(90deg, #091636 0%, #577496 50%, #B8C8DC 100%); }
+  .header-ids { display: flex; flex-direction: column; gap: 8px; align-items: flex-end; padding-bottom: 14px; }
+  .id-field { display: flex; align-items: center; gap: 8px; font-size: 11px; color: var(--muted); font-weight: 600; }
+  .id-field input {
+    background: var(--field-bg); border: 1.5px solid var(--border);
+    border-radius: 6px; color: var(--text); padding: 4px 9px;
+    font-size: 12px; width: 140px;
+  }
+  .id-field input:focus { outline: none; border-color: var(--accent); }
+  .id-field input::placeholder { color: var(--muted); opacity: 0.5; }
+
+  .form-wrapper {
+    background: var(--surface); border: 1px solid var(--border);
+    border-top: none; border-radius: 0 0 16px 16px; overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,45,68,0.10);
+  }
+
+  /* SECTIONS — jetzt als Akkordeon mit geführter Weiterschaltung */
+  .section { border-bottom: 1px solid var(--border); }
+  .section:last-child { border-bottom: none; }
+  .section-title {
+    background: var(--accent-lt); border-bottom: 2px solid var(--accent);
+    padding: 14px 20px; font-size: 11px; font-weight: 700;
+    letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent-mid);
+    display: flex; align-items: center; justify-content: space-between; gap: 10px;
+    cursor: pointer; min-height: 44px; -webkit-user-select: none; user-select: none;
+    transition: background 0.15s;
+  }
+  .section-title:active { background: #E2E9F3; }
+  .section-title-left { display: flex; align-items: center; gap: 10px; }
+  .section-title .num {
+    background: var(--orange); color: #fff; width: 24px; height: 24px;
+    border-radius: 50%; display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; flex-shrink: 0; transition: background 0.15s;
+  }
+  .section.section-done .num { background: #2E7D46; }
+  .section-chevron {
+    flex-shrink: 0; color: var(--accent-mid); transition: transform 0.2s ease;
+  }
+  .section.collapsed .section-chevron { transform: rotate(-90deg); }
+  .section-body {
+    padding: 16px 20px; display: flex; flex-direction: column; gap: 10px;
+    animation: sectionFadeIn 0.18s ease;
+  }
+  .section.collapsed .section-body { display: none; }
+  @keyframes sectionFadeIn {
+    from { opacity: 0; transform: translateY(-4px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+
+  /* WEITER-BUTTON am Ende jeder Section (geführter Ablauf) */
+  .section-next-wrap { display: flex; justify-content: flex-end; padding-top: 6px; }
+  .btn-next-section {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--accent); color: #fff; border: none; border-radius: 9px;
+    padding: 12px 22px; font-size: 13px; font-weight: 700; cursor: pointer;
+    min-height: 44px; letter-spacing: 0.02em; transition: background 0.15s;
+  }
+  .btn-next-section:hover { background: #091636; }
+  .btn-next-section:active { transform: scale(0.98); }
+
+  /* FIELDS */
+  .field-row { display: grid; grid-template-columns: 200px 1fr; gap: 8px; align-items: center; min-height: 30px; }
+  .field-row.double { grid-template-columns: 200px 1fr 160px 1fr; }
+  .field-label { font-size: 11px; font-weight: 600; color: var(--muted); letter-spacing: 0.03em; text-transform: uppercase; }
+  /* MEHRFACH-TÜR (baugleiche Türen an weiteren Standorten) */
+  .multidoor-block { background: var(--field-bg); border: 1px solid var(--border); border-radius: 8px; padding: 10px 12px; margin-top: 2px; }
+  .multidoor-hint { font-size: 11px; color: var(--muted); margin-bottom: 8px; }
+  .multidoor-row { display: grid; grid-template-columns: 1fr 1fr auto; gap: 8px; align-items: center; margin-bottom: 6px; }
+  .multidoor-del { background: none; border: none; color: var(--muted); font-size: 15px; line-height: 1; cursor: pointer; padding: 4px 6px; }
+  .multidoor-del:hover { color: #C0392B; }
+  .multidoor-add { font-size: 11px; padding: 6px 14px; box-shadow: none; margin-top: 2px; }
+  @media (max-width: 480px) {
+    .multidoor-row { grid-template-columns: 1fr 1fr; }
+    .multidoor-del { grid-column: 1 / -1; justify-self: end; }
+  }
+  .field-input {
+    background: var(--field-bg); border: 1.5px solid var(--border); border-radius: 8px;
+    padding: 5px 10px; font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-size: 13px;
+    color: var(--text); width: 100%; transition: border-color 0.15s;
+  }
+  .field-input:focus { outline: none; border-color: var(--accent); box-shadow: 0 0 0 2px rgba(26,74,107,0.12); }
+  textarea.field-input { resize: vertical; min-height: 50px; }
+
+  /* GPS ROW */
+  .gps-row {
+    display: grid; grid-template-columns: 200px 1fr auto; gap: 8px; align-items: center; min-height: 30px;
+  }
+  .gps-btn {
+    display: flex; align-items: center; gap: 5px; padding: 5px 12px;
+    background: var(--accent); color: #fff; border: none; border-radius: 6px;
+    font-size: 11px; font-weight: 600; cursor: pointer; white-space: nowrap;
+    transition: background 0.15s; letter-spacing: 0.02em;
+  }
+  .gps-btn:hover { background: #091636; }
+  .gps-btn:disabled { background: var(--border-strong); cursor: not-allowed; }
+  .gps-status { font-size: 10px; color: var(--muted); margin-top: 2px; }
+  .gps-coords { font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 10px; color: var(--accent); }
+
+  /* CHECKBOXES — als große Chips/Pills für Tablet-Bedienung */
+  .check-group { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .check-item {
+    display: flex; align-items: center; gap: 8px; cursor: pointer; user-select: none;
+    font-size: 13px; font-weight: 600; color: var(--text);
+    background: var(--field-bg); border: 1.5px solid var(--border); border-radius: 22px;
+    padding: 11px 16px; min-height: 44px; transition: background 0.12s, border-color 0.12s, color 0.12s;
+  }
+  .check-item:active { transform: scale(0.97); }
+  .check-item:has(input:checked) {
+    background: var(--accent); border-color: var(--accent); color: #fff;
+  }
+  .check-item input[type="checkbox"] {
+    appearance: none; width: 18px; height: 18px; border: 2px solid var(--border-strong);
+    border-radius: 4px; cursor: pointer; flex-shrink: 0; position: relative; transition: background 0.1s, border-color 0.1s;
+  }
+  .check-item input[type="checkbox"]:checked { background: #fff; border-color: #fff; }
+  .check-item input[type="checkbox"]:checked::after {
+    content: ''; position: absolute; left: 4px; top: 0px; width: 6px; height: 11px;
+    border: 2px solid var(--accent); border-top: none; border-left: none; transform: rotate(45deg);
+  }
+  .check-item input[type="radio"] {
+    appearance: none; width: 18px; height: 18px; border: 2px solid var(--border-strong);
+    border-radius: 50%; cursor: pointer; flex-shrink: 0; position: relative; transition: background 0.1s, border-color 0.1s;
+  }
+  .check-item input[type="radio"]:checked { background: #fff; border-color: #fff; }
+  .check-item input[type="radio"]:checked::after {
+    content: ''; position: absolute; left: 3px; top: 3px; width: 8px; height: 8px;
+    background: var(--accent); border-radius: 50%;
+  }
+
+  /* MASS TABLES */
+  .mass-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 0; }
+  /* During PDF capture, CSS grid layouts (esp. auto-fill/minmax) can
+     confuse html2canvas (IndexSizeError on some mobile renderers).
+     Force simple flex/block layouts while exporting; on-screen design
+     is unaffected since this class is only applied during capture. */
+  .pdf-export-mode .mass-grid { display: block; }
+  .pdf-export-mode .mass-group { display: block; width: 100%; }
+  .pdf-export-mode .mass-row { display: flex; justify-content: space-between; align-items: center; }
+  .pdf-export-mode .mass-row > .mass-label { flex: 1; }
+  .pdf-export-mode .mass-row > .mass-input { flex: 0 0 auto; }
+  /* Note: the .sketch-area repeating-linear-gradient pattern is handled via
+     JS during PDF export (temporarily swapped for a plain background), since
+     small-tile CSS gradient patterns have been observed to trigger
+     IndexSizeError in html2canvas on iOS Safari. See exportPDF(). */
+  .mass-group { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 6px; }
+  .mass-group-title { background: #EEF2F8; padding: 5px 10px; font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); border-bottom: 1px solid var(--border); }
+  .mass-row { display: grid; grid-template-columns: 1fr 90px 32px; align-items: center; padding: 4px 10px; border-bottom: 1px solid var(--border); }
+  .mass-row:last-child { border-bottom: none; }
+  .mass-row:nth-child(even) { background: var(--field-bg); }
+  .mass-label { font-size: 11px; color: var(--text); }
+  .mass-abbr { font-size: 10px; color: var(--muted); }
+  .mass-input {
+    background: none; border: none; border-bottom: 1.5px solid var(--border);
+    padding: 2px 4px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px;
+    font-weight: 500; color: var(--orange); text-align: right; width: 80px; transition: border-color 0.15s;
+  }
+  .mass-input:focus { outline: none; border-bottom-color: var(--orange); }
+  .mass-unit { font-size: 10px; color: var(--muted); padding-left: 3px; }
+
+  /* Bedingt sichtbare Zeilen (z. B. Rohrrahmen-Verbreiterung) */
+  .cond-hidden { display: none !important; }
+
+  /* Hinweistext innerhalb einer field-row */
+  .field-note { font-size: 10.5px; line-height: 1.35; color: var(--muted); font-style: italic; margin-bottom: 6px; }
+
+  /* Rohrrahmen-Verbreiterung */
+  .rr-widen { width: 100%; }
+  .rr-widen-grid { display: flex; flex-wrap: wrap; gap: 10px; }
+  .rr-widen-item { display: flex; align-items: center; gap: 5px; font-size: 11px; font-weight: 600;
+    color: var(--text); text-transform: uppercase; letter-spacing: 0.02em; }
+  .rr-input { width: 70px !important; text-align: right; }
+  .rr-unit { font-size: 10px; color: var(--muted); }
+
+  /* Bandabstände-Block mit Skizze */
+  .band-block { border: 1px solid var(--border); border-radius: 4px; overflow: hidden; margin: 6px; }
+  .band-block-title { background: #EEF2F8; padding: 5px 10px; font-size: 10px; font-weight: 600;
+    text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); border-bottom: 1px solid var(--border); }
+  .band-block-inner { display: flex; flex-wrap: wrap; align-items: flex-start; gap: 8px; padding: 10px; }
+  .band-sketch-wrap { position: relative; width: 300px; max-width: 100%; aspect-ratio: 300 / 220; flex: 0 0 auto; }
+  .band-sketch-svg { position: absolute; inset: 0; width: 100%; height: 100%; }
+  .band-fld { position: absolute; display: flex; flex-direction: column; width: 78px; }
+  .band-fld > span { font-size: 9.5px; font-weight: 600; color: var(--text); line-height: 1.1;
+    text-transform: uppercase; letter-spacing: 0.02em; }
+  .band-fld > span small { display: block; font-size: 8px; font-weight: 400; color: var(--muted);
+    text-transform: none; letter-spacing: 0; }
+  .band-fld input { width: 100%; background: #fff; border: 1px solid var(--border); border-radius: 3px;
+    padding: 3px 4px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 12px;
+    font-weight: 600; color: var(--orange); text-align: right; margin-top: 2px; }
+  .band-fld input:focus { outline: none; border-color: var(--orange); }
+  .band-fld em { position: absolute; right: 5px; bottom: 4px; font-size: 8px; font-style: normal; color: var(--muted); pointer-events: none; }
+  .band-fld-ob  { left: 1%;  top: 8%; }
+  .band-fld-mid { left: 1%;  top: 44%; }
+  .band-fld-un  { left: 1%;  top: 70%; }
+  .band-anz { flex: 1 1 150px; display: flex; align-items: flex-start; padding-top: 4px; }
+  .band-anz label { display: flex; align-items: center; gap: 6px; font-size: 11px; font-weight: 600;
+    color: var(--text); text-transform: uppercase; letter-spacing: 0.02em; }
+  .band-anz input { width: 70px; background: none; border: none; border-bottom: 1.5px solid var(--border);
+    padding: 2px 4px; font-family: ui-monospace, 'SF Mono', Menlo, monospace; font-size: 13px;
+    font-weight: 500; color: var(--orange); text-align: right; }
+  .band-anz input:focus { outline: none; border-bottom-color: var(--orange); }
+  .band-anz em { font-size: 10px; font-style: normal; color: var(--muted); }
+
+  /* DIN SVG CARDS */
+  .din-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; margin-top: 4px; }
+  .din-card {
+    border: 2px solid var(--border); border-radius: 8px; overflow: hidden;
+    cursor: pointer; transition: border-color 0.18s, box-shadow 0.18s;
+    background: #fff;
+  }
+  .din-card:hover { border-color: #3A7AAB; }
+  .din-card.selected { border-color: var(--orange); box-shadow: 0 0 0 3px rgba(217,94,31,0.15); }
+  .din-card-header {
+    background: var(--accent-lt); padding: 8px 14px; display: flex;
+    align-items: center; gap: 10px; border-bottom: 1px solid var(--border);
+  }
+  .din-card-header input[type="radio"] { flex-shrink: 0; }
+  .din-card-header strong { font-size: 12px; color: var(--accent); font-weight: 700; letter-spacing: 0.01em; }
+  .din-svg-wrap { padding: 14px 20px; background: #fff; display: flex; justify-content: center; }
+  .din-svg-wrap svg { width: 100%; max-width: 200px; height: auto; }
+  .din-caption { padding: 7px 14px; font-size: 10px; color: var(--muted); background: var(--field-bg); border-top: 1px solid var(--border); line-height: 1.5; }
+
+  /* SKETCH */
+  .sketch-area {
+    border: 1.5px dashed var(--border-strong); border-radius: 6px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 24px, #E8E5DF 24px, #E8E5DF 25px),
+    repeating-linear-gradient(90deg, transparent, transparent 24px, #E8E5DF 24px, #E8E5DF 25px);
+    background-color: #FAFAF8; min-height: 200px;
+    display: flex; align-items: center; justify-content: center; position: relative;
+    overflow: hidden;
+  }
+  .sketch-hint { color: var(--muted); font-size: 12px; text-align: center; pointer-events: none; position: relative; z-index: 1; }
+  .sketch-hint svg { display: block; margin: 0 auto 6px; opacity: 0.4; }
+
+  /* LICHTAUSSCHNITT / LÜFTUNGSGITTER MINI-SKETCH */
+  .lg-sketch-wrap {
+    position: relative; width: 100%; min-height: 120px;
+    border: 1.5px dashed var(--border-strong); border-radius: 6px;
+    background: repeating-linear-gradient(0deg, transparent, transparent 24px, #E8E5DF 24px, #E8E5DF 25px),
+    repeating-linear-gradient(90deg, transparent, transparent 24px, #E8E5DF 24px, #E8E5DF 25px);
+    background-color: #FAFAF8; overflow: hidden;
+  }
+  .lg-sketch-hint {
+    position: absolute; inset: 0; display: flex; align-items: center; justify-content: center;
+    text-align: center; color: var(--muted); font-size: 12px; padding: 10px; pointer-events: none; z-index: 1;
+  }
+
+  /* DRAW CANVAS (sketch + signatures) */
+  .draw-canvas {
+    position: absolute; inset: 0; width: 100%; height: 100%;
+    touch-action: none; /* required so Apple Pencil / finger drawing isn't hijacked by scroll */
+    -webkit-user-select: none; user-select: none;
+    cursor: crosshair;
+  }
+  .sketch-area .draw-canvas { z-index: 2; }
+  .draw-toolbar {
+    display: flex; gap: 8px; margin-top: 6px; flex-wrap: wrap;
+  }
+  .sign-box { position: relative; }
+  .sign-canvas-wrap {
+    position: relative; width: 100%; height: 90px; margin-top: 6px;
+    border: 1.5px dashed var(--border-strong); border-radius: 6px;
+    background: #FAFAF8; overflow: hidden;
+  }
+  .sign-canvas-wrap .draw-canvas { z-index: 1; }
+  .sign-clear-btn {
+    margin-top: 6px; font-size: 10px; padding: 5px 12px;
+  }
+
+  /* FOTO */
+  .foto-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .foto-slot {
+    border: 1.5px dashed var(--border-strong); border-radius: 5px; background: var(--field-bg);
+    aspect-ratio: 4/3; display: flex; flex-direction: column; align-items: center;
+    justify-content: center; gap: 6px; cursor: pointer; transition: border-color 0.15s, background 0.15s;
+    position: relative; overflow: hidden;
+  }
+  .foto-slot:hover { border-color: var(--accent); background: var(--accent-lt); }
+  .foto-slot label { font-size: 10px; color: var(--muted); text-align: center; padding: 0 8px; cursor: pointer; }
+  .foto-slot .icon { font-size: 22px; opacity: 0.4; }
+  .foto-slot img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; }
+  .foto-slot input[type="file"] { display: none; }
+
+  /* SIGN */
+  .sign-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 4px; }
+  .sign-box { border: 1.5px solid var(--border); border-radius: 10px; padding: 12px 14px; background: var(--field-bg); }
+  .sign-box label { font-size: 10px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); display: block; margin-bottom: 8px; }
+  .sign-line { border-top: 1.5px solid var(--border-strong); margin-top: 40px; padding-top: 4px; font-size: 10px; color: var(--muted); }
+
+  /* FOOTER */
+  .doc-footer {
+    padding: 10px 20px; background: var(--accent-lt); border-top: 2px solid var(--border);
+    display: flex; justify-content: space-between; align-items: center; font-size: 10px; color: var(--muted);
+  }
+
+  /* ACTIONS */
+  .actions { position: fixed; bottom: 20px; right: 20px; display: flex; gap: 8px; z-index: 100; }
+  .btn {
+    padding: 10px 18px; border-radius: 5px; border: none;
+    font-family: -apple-system, 'Helvetica Neue', Arial, sans-serif; font-size: 13px; font-weight: 500;
+    cursor: pointer; display: flex; align-items: center; gap: 6px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.15); transition: transform 0.1s, box-shadow 0.1s;
+  }
+  .btn:active { transform: translateY(1px); box-shadow: 0 1px 6px rgba(0,0,0,0.12); }
+  .btn-primary { background: var(--accent); color: #fff; border-radius: 10px; }
+  .btn-primary:hover { background: #091636; }
+  .btn-secondary { background: #fff; color: var(--text); border: 1.5px solid var(--border); border-radius: 10px; }
+  .btn-secondary:hover { background: var(--field-bg); }
+  .btn-export { background: var(--orange); color: #fff; border-radius: 10px; font-weight: 700; }
+  .btn-export:hover { background: #A84815; }
+  .btn-email { background: var(--accent); color: #fff; border-radius: 10px; font-weight: 700; }
+  .btn-email:hover { background: #091636; }
+
+  .divider { height: 1px; background: var(--border); margin: 4px 0; }
+
+  /* PDF EXPORT OVERLAY */
+  #export-overlay {
+    display: none; position: fixed; inset: 0; background: rgba(0,0,0,0.55);
+    z-index: 999; align-items: center; justify-content: center; flex-direction: column; gap: 16px;
+  }
+  #export-overlay.active { display: flex; }
+  .export-box {
+    background: #fff; border-radius: 10px; padding: 32px 40px; text-align: center;
+    box-shadow: 0 8px 40px rgba(0,0,0,0.25);
+  }
+  .export-box h3 { font-size: 15px; color: var(--accent-mid); font-weight: 800; margin-bottom: 8px; }
+  .export-box p { font-size: 12px; color: var(--muted); }
+  .spinner {
+    width: 36px; height: 36px; border: 3px solid var(--border);
+    border-top-color: var(--orange); border-radius: 50%;
+    animation: spin 0.8s linear infinite; margin: 16px auto 0;
+  }
+  @keyframes spin { to { transform: rotate(360deg); } }
+
+  @media (max-width: 640px) {
+    .field-row { grid-template-columns: 1fr; }
+    .field-row.double { grid-template-columns: 1fr; }
+    .gps-row { grid-template-columns: 1fr; }
+    .foto-grid { grid-template-columns: repeat(2,1fr); }
+    .din-grid { grid-template-columns: 1fr; }
+    .sign-grid { grid-template-columns: 1fr; }
+    .doc-header { grid-template-columns: 1fr; }
+    .header-ids { align-items: flex-start; }
+    .mass-grid { grid-template-columns: 1fr; }
+  }
+
+  @media print {
+    body { background: #fff; padding: 0; }
+    .actions { display: none; }
+    .doc-header { border-radius: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    .form-wrapper { border-radius: 0; border: none; }
+    .section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+
+  /* PAYMENT GATE */
+  #pay-gate, #code-gate {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.6); z-index: 1000;
+    align-items: center; justify-content: center;
+  }
+  #pay-gate.active, #code-gate.active { display: flex; }
+
+  /* ADMIN PANEL */
+  #admin-gate {
+    display: none; position: fixed; inset: 0;
+    background: rgba(0,0,0,0.75); z-index: 1001;
+    align-items: flex-start; justify-content: center;
+    padding: 20px 16px; overflow-y: auto;
+  }
+  #admin-gate.active { display: flex; }
+  .admin-box {
+    background: #fff; border-radius: 18px; padding: 28px 24px;
+    max-width: 420px; width: 100%;
+    box-shadow: 0 12px 48px rgba(0,27,67,0.35);
+    margin: auto;
+  }
+  .admin-header {
+    display: flex; align-items: center; justify-content: space-between;
+    margin-bottom: 20px; padding-bottom: 14px;
+    border-bottom: 2px solid var(--accent);
+  }
+  .admin-header h2 { font-size: 18px; font-weight: 800; color: var(--accent); margin: 0; }
+  .admin-header span { font-size: 22px; }
+  .admin-section-label {
+    font-size: 10px; font-weight: 700; letter-spacing: 0.08em;
+    text-transform: uppercase; color: var(--muted); margin: 16px 0 8px;
+  }
+  .admin-employee-list { display: flex; flex-direction: column; gap: 6px; margin-bottom: 4px; }
+  .admin-employee-row {
+    display: grid; grid-template-columns: 110px 1fr auto;
+    gap: 6px; align-items: center;
+  }
+  .admin-employee-row input {
+    padding: 7px 10px; border: 1.5px solid var(--border); border-radius: 8px;
+    font-size: 13px; color: var(--text); background: var(--field-bg);
+    font-family: -apple-system, monospace; font-weight: 600;
+  }
+  .admin-employee-row input:focus { outline: none; border-color: var(--accent); }
+  .admin-employee-row input.name-input { font-family: -apple-system, sans-serif; font-weight: 400; }
+  .admin-del-btn {
+    background: none; border: none; color: var(--muted);
+    font-size: 18px; cursor: pointer; padding: 4px 6px; line-height: 1;
+  }
+  .admin-del-btn:hover { color: #C0392B; }
+  .admin-add-row-btn {
+    margin-top: 8px; font-size: 12px; padding: 7px 14px;
+    background: var(--accent-lt); border: 1.5px dashed var(--border-strong);
+    border-radius: 8px; color: var(--accent); font-weight: 700;
+    cursor: pointer; width: 100%; text-align: center;
+  }
+  .admin-add-row-btn:hover { background: #DDE6F0; }
+  .admin-footer {
+    display: flex; gap: 8px; margin-top: 20px; padding-top: 16px;
+    border-top: 1px solid var(--border);
+  }
+  .admin-save-btn {
+    flex: 1; padding: 12px; background: var(--accent); color: #fff;
+    border: none; border-radius: 10px; font-size: 14px; font-weight: 700;
+    cursor: pointer;
+  }
+  .admin-save-btn:hover { background: #091636; }
+  .admin-cancel-btn {
+    padding: 12px 18px; background: none; border: 1.5px solid var(--border);
+    border-radius: 10px; font-size: 13px; color: var(--muted); cursor: pointer;
+  }
+  .admin-status {
+    font-size: 11px; margin-top: 8px; min-height: 16px; text-align: center;
+    font-weight: 600;
+  }
+  .admin-status.ok { color: #1E6B3E; }
+  .admin-status.err { color: #C0392B; }
+  .admin-code-badge {
+    display: inline-block; background: var(--accent); color: #fff;
+    border-radius: 4px; padding: 1px 6px; font-size: 10px;
+    font-family: monospace; font-weight: 700; letter-spacing: 0.05em;
+  }
+  .pay-box {
+    background: #fff; border-radius: 18px; padding: 32px 28px;
+    text-align: center; max-width: 320px; width: 90%;
+    box-shadow: 0 12px 48px rgba(0,27,67,0.25);
+  }
+  .pay-icon { font-size: 40px; margin-bottom: 10px; }
+  .pay-box h2 { font-size: 20px; font-weight: 800; color: var(--accent); margin-bottom: 4px; }
+  .pay-sub { font-size: 12px; color: var(--muted); }
+  .pay-price { font-size: 36px; font-weight: 800; color: var(--orange); margin: 10px 0 20px; }
+  #paypal-btn {
+    display: flex; align-items: center; justify-content: center; gap: 10px;
+    background: #0070BA; color: #fff; border-radius: 10px;
+    padding: 13px 20px; font-size: 14px; font-weight: 700;
+    text-decoration: none; transition: background 0.15s;
+  }
+  #paypal-btn:hover { background: #005ea6; }
+  .pay-divider {
+    font-size: 11px; color: var(--muted); margin: 16px 0;
+    display: flex; align-items: center; gap: 8px;
+  }
+  .pay-divider::before, .pay-divider::after {
+    content: ''; flex: 1; height: 1px; background: var(--border);
+  }
+  .pay-code-wrap {
+    display: flex; gap: 8px;
+  }
+  .pay-code-wrap input {
+    flex: 1; padding: 10px 12px; border: 1.5px solid var(--border);
+    border-radius: 8px; font-size: 16px; font-weight: 600;
+    text-align: center; letter-spacing: 0.15em; color: var(--accent);
+    font-family: -apple-system, monospace;
+  }
+  .pay-code-wrap input:focus { outline: none; border-color: var(--accent); }
+  .pay-code-wrap button {
+    padding: 10px 16px; background: var(--accent); color: #fff;
+    border: none; border-radius: 8px; font-size: 16px; font-weight: 700; cursor: pointer;
+  }
+  .pay-code-wrap button:hover { background: #091636; }
+  #code-msg { font-size: 12px; margin-top: 8px; min-height: 18px; }
+  #code-msg.ok { color: #1E6B3E; font-weight: 600; }
+  #code-msg.err { color: #C0392B; font-weight: 600; }
+  .pay-cancel {
+    margin-top: 18px; background: none; border: none;
+    color: var(--muted); font-size: 12px; cursor: pointer; text-decoration: underline;
+  }
+
+  /* Textauswahl global sperren außer Eingabefelder */
+  body { -webkit-user-select: none; -moz-user-select: none; -ms-user-select: none; user-select: none; }
+  input, textarea { -webkit-user-select: text !important; user-select: text !important; }
+
+  /* ── AUTOSAVE BANNER ─────────────────────────────────── */
+  #autosave-banner {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+    background: var(--accent); color: #fff;
+    padding: 10px 16px; display: flex; align-items: center; justify-content: space-between;
+    gap: 12px; font-size: 12px; font-weight: 600;
+    box-shadow: 0 2px 12px rgba(0,27,67,0.3);
+    transform: translateY(-100%); transition: transform 0.3s ease;
+  }
+  #autosave-banner.visible { transform: translateY(0); }
+  #autosave-banner.restore { background: #D95E1F; }
+  #autosave-banner .banner-actions { display: flex; gap: 8px; }
+  #autosave-banner button {
+    background: rgba(255,255,255,0.2); border: 1px solid rgba(255,255,255,0.4);
+    color: #fff; border-radius: 6px; padding: 4px 12px; font-size: 11px;
+    font-weight: 700; cursor: pointer;
+  }
+  #autosave-banner button:hover { background: rgba(255,255,255,0.35); }
+  #autosave-indicator {
+    position: fixed; bottom: 70px; left: 16px; z-index: 100;
+    background: rgba(0,27,67,0.8); color: #fff; border-radius: 20px;
+    padding: 4px 12px; font-size: 10px; font-weight: 600;
+    opacity: 0; transition: opacity 0.4s; pointer-events: none;
+  }
+  #autosave-indicator.flash { opacity: 1; }
+
+  /* ── MULTI-DOOR TABS ─────────────────────────────────── */
+  .door-tabs-bar {
+    background: var(--accent); padding: 8px 12px 0;
+    display: flex; gap: 4px; align-items: flex-end; flex-wrap: wrap;
+    border-radius: 6px 6px 0 0;
+  }
+  .door-tab {
+    padding: 6px 14px; border-radius: 6px 6px 0 0;
+    background: rgba(255,255,255,0.15); color: rgba(255,255,255,0.7);
+    border: none; font-size: 12px; font-weight: 600; cursor: pointer;
+    transition: background 0.15s, color 0.15s; white-space: nowrap;
+  }
+  .door-tab:hover { background: rgba(255,255,255,0.25); color: #fff; }
+  .door-tab.active { background: var(--bg); color: var(--accent); }
+  .door-tab.add-tab {
+    background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.6);
+    border: 1.5px dashed rgba(255,255,255,0.3); font-size: 14px; padding: 4px 12px;
+  }
+  .door-tab.add-tab:hover { background: rgba(255,255,255,0.2); color: #fff; }
+  .door-tab .tab-close {
+    margin-left: 6px; opacity: 0.6; font-size: 11px; display: inline-block;
+  }
+  .door-tab:hover .tab-close { opacity: 1; }
+  .door-panel { display: none; }
+  .door-panel.active { display: block; }
+  .door-tabs-hint {
+    font-size: 11px; color: var(--muted); padding: 4px 12px 8px;
+    background: var(--accent-lt); border-bottom: 1px solid var(--border);
+    display: flex; align-items: center; gap: 6px;
+  }
+
+  /* ── VALIDATION HINTS ────────────────────────────────── */
+  .val-warning {
+    font-size: 10px; color: #C0392B; font-weight: 600;
+    display: none; margin-top: 2px; padding: 3px 8px;
+    background: #FEF2F2; border-radius: 4px; border-left: 3px solid #C0392B;
+  }
+  .val-warning.visible { display: block; }
+  .mass-input.warn { border-bottom-color: #C0392B !important; }
+
+  /* ── PWA INSTALL PROMPT ──────────────────────────────── */
+  #pwa-prompt {
+    display: none; position: fixed; bottom: 80px; left: 16px; right: 16px;
+    background: var(--accent); color: #fff; border-radius: 12px;
+    padding: 14px 16px; z-index: 150;
+    box-shadow: 0 4px 20px rgba(0,27,67,0.35);
+    flex-direction: column; gap: 10px;
+  }
+  #pwa-prompt.visible { display: flex; }
+  #pwa-prompt p { font-size: 12px; line-height: 1.5; margin: 0; }
+  #pwa-prompt strong { font-size: 13px; display: block; margin-bottom: 4px; }
+  #pwa-prompt .pwa-btns { display: flex; gap: 8px; }
+  #pwa-prompt button {
+    border: none; border-radius: 8px; padding: 8px 16px;
+    font-size: 12px; font-weight: 700; cursor: pointer;
+  }
+  #pwa-prompt .pwa-install { background: var(--orange); color: #fff; }
+  #pwa-prompt .pwa-dismiss { background: rgba(255,255,255,0.15); color: #fff; }
+
+  /* ── FILENAME PREVIEW ────────────────────────────────── */
+  .pdf-filename-hint {
+    font-size: 10px; color: var(--muted); margin-top: 6px;
+    font-family: ui-monospace, monospace; padding: 4px 8px;
+    background: var(--field-bg); border-radius: 4px; display: inline-block;
+  }
+</style>
+</head>
+<body>
+
+<!-- AUTOSAVE RESTORE BANNER -->
+<div id="autosave-banner">
+  <span id="autosave-banner-msg">💾 Nicht gespeicherte Eingaben wiederhergestellt</span>
+  <div class="banner-actions">
+    <button onclick="restoreAutosave()">✓ Wiederherstellen</button>
+    <button onclick="dismissAutosave()">✕ Verwerfen</button>
+  </div>
+</div>
+
+<!-- AUTOSAVE FLASH INDICATOR -->
+<div id="autosave-indicator">✓ Gespeichert</div>
+
+<!-- PWA INSTALL PROMPT -->
+<div id="pwa-prompt">
+  <p><strong>📱 App auf Startbildschirm</strong>Zum Startbildschirm hinzufügen für Offline-Nutzung und schnelleren Zugriff auf der Baustelle.</p>
+  <div class="pwa-btns">
+    <button class="pwa-install" id="pwa-install-btn" onclick="installPWA()">Installieren</button>
+    <button class="pwa-dismiss" onclick="dismissPWA()">Nicht jetzt</button>
+  </div>
+</div>
+
+<!-- MITARBEITER-CODE GANZ AM ANFANG -->
+<div id="code-gate">
+  <div class="pay-box">
+    <div class="pay-icon">🔑</div>
+    <h2>Mitarbeiter-Code</h2>
+    <p class="pay-sub">Bitte zu Beginn eingeben – wird automatisch in „Aufgenommen von“ und beim PDF-Export übernommen.</p>
+    <div class="pay-code-wrap" style="margin-top:18px;">
+      <input id="code-input-start" type="text" placeholder="Mitarbeitercode" maxlength="10" autocomplete="off">
+      <button onclick="checkStartCode()">✓</button>
+    </div>
+    <div id="code-msg-start"></div>
+    <button class="pay-cancel" onclick="skipStartCode()">Ohne Code fortfahren</button>
+  </div>
+</div>
+
+<!-- PDF EXPORT OVERLAY -->
+<div id="export-overlay">
+  <div class="export-box">
+    <h3>PDF wird erstellt …</h3>
+    <p>Wasserzeichen wird eingefügt</p>
+    <div class="spinner"></div>
+  </div>
+</div>
+
+<!-- PAYMENT GATE -->
+<div id="pay-gate">
+  <div class="pay-box">
+    <div class="pay-icon">📄</div>
+    <h2>PDF Export</h2>
+    <p class="pay-sub">Einmaliger Download für</p>
+    <div class="pay-price">0,09 €</div>
+
+    <a id="paypal-btn" href="#" target="_blank" onclick="onPaypalClick()">
+      <svg height="20" viewBox="0 0 101 32" xmlns="http://www.w3.org/2000/svg"><path fill="#fff" d="M12.237 2.343h-7.5a1.04 1.04 0 00-1.028.878L.709 25.23a.624.624 0 00.616.722h3.58a1.04 1.04 0 001.028-.878l.868-5.503a1.04 1.04 0 011.028-.878h2.372c4.942 0 7.794-2.392 8.544-7.133.337-2.073.014-3.702-.962-4.843-1.072-1.254-2.974-1.374-5.546-1.374zm.867 7.027c-.41 2.687-2.468 2.687-4.459 2.687h-1.132l.794-5.027a.625.625 0 01.617-.527h.52c1.355 0 2.634 0 3.293.772.394.462.514 1.147.367 2.095zm21.55-.083h-3.594a.625.625 0 00-.617.527l-.159 1.006-.251-.364c-.779-1.131-2.516-1.509-4.25-1.509-3.977 0-7.374 3.013-8.034 7.237-.344 2.108.145 4.122 1.343 5.527 1.1 1.291 2.673 1.829 4.545 1.829 3.205 0 4.982-2.061 4.982-2.061l-.16 1a.624.624 0 00.616.722h3.236a1.04 1.04 0 001.028-.878l1.941-12.295a.624.624 0 00-.626-.741zm-5.007 7.003c-.348 2.058-1.983 3.44-4.063 3.44-1.044 0-1.88-.336-2.415-.971-.531-.631-.731-1.53-.564-2.531.325-2.04 1.985-3.467 4.034-3.467 1.022 0 1.853.338 2.398.978.547.645.762 1.549.61 2.551z"/></svg>
+      Mit PayPal bezahlen · 0,09 €
+    </a>
+
+    <div class="pay-divider">oder</div>
+
+    <div class="pay-code-wrap">
+      <input id="code-input" type="text" placeholder="Mitarbeitercode" maxlength="10" autocomplete="off">
+      <button onclick="checkCode()">✓</button>
+    </div>
+    <div id="code-msg"></div>
+
+    <button class="pay-cancel" onclick="closePayGate()">Abbrechen</button>
+  </div>
+</div>
+
+<!-- ADMIN PANEL -->
+<div id="admin-gate">
+  <div class="admin-box">
+    <div class="admin-header">
+      <span>⚙️</span>
+      <h2>Mitarbeiter-Verwaltung</h2>
+      <button onclick="closeAdmin()" style="background:none;border:none;font-size:22px;cursor:pointer;color:var(--muted);">✕</button>
+    </div>
+
+    <div class="admin-section-label">Mitarbeiter-Codes &amp; Namen</div>
+    <div style="font-size:11px;color:var(--muted);margin-bottom:10px;">
+      Codes und Namen werden verschlüsselt auf diesem Gerät gespeichert.<br>
+      Admin-Code <span class="admin-code-badge" id="admin-code-display"></span> erscheint nicht in der Liste.
+    </div>
+
+    <div class="admin-employee-list" id="admin-employee-list">
+      <!-- rows generated by JS -->
+    </div>
+    <button class="admin-add-row-btn" onclick="adminAddRow()">+ Mitarbeiter hinzufügen</button>
+
+    <div class="admin-status" id="admin-status"></div>
+
+    <div class="admin-footer">
+      <button class="admin-cancel-btn" onclick="closeAdmin()">Abbrechen</button>
+      <button class="admin-save-btn" onclick="adminSave()">💾 Speichern</button>
+    </div>
+  </div>
+</div>
+
+<!-- DOOR TABS -->
+<div class="door-tabs-bar" id="door-tabs-bar">
+  <button class="door-tab add-tab" onclick="addNewDoor()" title="Neue Tür hinzufügen">+</button>
+</div>
+<div class="door-tabs-hint">
+  📋 Tür aktuell – weitere Türen per <strong>+</strong> hinzufügen, Auftragsdaten bleiben erhalten
+</div>
+
+<!-- HEADER -->
+<div class="doc-header">
+  <div class="hdr-titles">
+    <div class="hdr-bar-row">
+      <div class="hdr-bar b1"></div>
+      <div class="hdr-bar b2"></div>
+      <div class="hdr-bar b3"></div>
+    </div>
+    <h1>Türblatt Aufmaß</h1>
+    <p>Aufnahmeprotokoll für Baustelle</p>
+  </div>
+  <div class="header-ids">
+    <div class="id-field">
+      <span>Auftrags-Nr.</span>
+      <input type="text" placeholder="z. B. 2026-0042">
+    </div>
+    <div class="id-field">
+      <span>Pos.-Nr.</span>
+      <input type="text" placeholder="z. B. 04">
+    </div>
+  </div>
+</div>
+<div class="hdr-stripe"></div>
+
+<div class="form-wrapper" id="main-form">
+
+  <!-- 1 ALLGEMEINE INFORMATIONEN -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">1</span> Allgemeine Informationen</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="field-row">
+        <span class="field-label">Projekt / Bauvorhaben</span>
+        <input class="field-input" id="field-projekt" type="text" placeholder="z. B. Neubau Musterstraße 12">
+      </div>
+      <!-- GPS ADDRESS ROW -->
+      <div class="gps-row">
+        <span class="field-label">Baustellen-Adresse</span>
+        <div style="display:flex;flex-direction:column;gap:3px;">
+          <input class="field-input" id="field-adresse" type="text" placeholder="Straße, PLZ, Ort – oder GPS ermitteln →">
+          <div class="gps-status" id="gps-status"></div>
+        </div>
+        <button class="gps-btn" id="gps-btn" onclick="getGPS()">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8" stroke-opacity="0.3"/></svg>
+          GPS
+        </button>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Kunde / Auftraggeber</span>
+        <input class="field-input" type="text" placeholder="Firma oder Privatperson">
+      </div>
+      <div class="field-row">
+        <span class="field-label">Ansprechpartner</span>
+        <input class="field-input" type="text" placeholder="Name, Telefon">
+      </div>
+      <div class="field-row double">
+        <span class="field-label">Datum</span>
+        <input class="field-input" id="field-datum" type="date">
+        <span class="field-label">Aufgenommen von</span>
+        <input class="field-input" id="field-aufgenommen" type="text" placeholder="Name">
+      </div>
+      <div class="field-row double">
+        <span class="field-label">Etage / Bereich</span>
+        <input class="field-input" type="text" placeholder="z. B. EG, 1.OG, Keller">
+        <span class="field-label">Raumbezeichnung</span>
+        <input class="field-input" type="text" placeholder="z. B. Büro, Flur, WC">
+      </div>
+      <div class="field-row">
+        <span class="field-label">Baugleiche Türen</span>
+        <label class="check-item">
+          <input type="checkbox" id="multidoor-toggle" onchange="toggleMultiDoor()">
+          Diese Tür ist mehrfach baugleich vorhanden
+        </label>
+      </div>
+      <div class="multidoor-block" id="multidoor-block" style="display:none;">
+        <div class="multidoor-hint">Gleiche Maße &amp; Ausstattung – außerdem vorhanden an:</div>
+        <div id="multidoor-list"></div>
+        <button type="button" class="btn btn-secondary multidoor-add" onclick="addMultiDoorRow()">+ Weiterer Standort</button>
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 2 TÜRART -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">2</span> Türart &amp; Nutzung</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="field-row">
+        <span class="field-label">Türart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="tuerart"> Stahlblechtür</label>
+          <label class="check-item"><input type="radio" name="tuerart"> Holztür</label>
+          <label class="check-item"><input type="radio" name="tuerart"> Rohrrahmen-Stahl</label>
+          <label class="check-item"><input type="radio" name="tuerart"> Rohrrahmen-Alu</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Einsatzart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="einsatzart"> Innentür</label>
+          <label class="check-item"><input type="radio" name="einsatzart"> Außentür</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Brandschutz</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="brand"> Keine</label>
+          <label class="check-item"><input type="radio" name="brand"> T30-1 / EI2 30</label>
+          <label class="check-item"><input type="radio" name="brand"> T60 / EI2 60</label>
+          <label class="check-item"><input type="radio" name="brand"> T90 / EI2 90</label>
+          <label class="check-item"><input type="radio" name="brand"> T120 / EI2 120</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Rauchschutz</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="rauch"> Keine</label>
+          <label class="check-item"><input type="radio" name="rauch"> RS (EN 1634-3)</label>
+          <label class="check-item"><input type="radio" name="rauch"> RS + Dichtung</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Rauchschutz-Ausführung</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="rauchausf"> Bodendichtung</label>
+          <label class="check-item"><input type="radio" name="rauchausf"> Bodendichtung mit Auflaufschwelle</label>
+          <label class="check-item"><input type="radio" name="rauchausf"> Anschlagdichtung umlaufend</label>
+          <label class="check-item"><input type="radio" name="rauchausf"> Sonstige</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Schallschutz</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="schall"> Keine</label>
+          <label class="check-item"><input type="radio" name="schall"> Rw 32 dB</label>
+          <label class="check-item"><input type="radio" name="schall"> Rw 37 dB</label>
+          <label class="check-item"><input type="radio" name="schall"> Rw 42 dB</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Türflügel</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="fluegel"> 1-flügelig</label>
+          <label class="check-item"><input type="radio" name="fluegel"> 2-flügelig (gleichwertig)</label>
+          <label class="check-item"><input type="radio" name="fluegel"> 2-flügelig (ungleich)</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Einbruchschutz (RC)</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="rc"> Keine</label>
+          <label class="check-item"><input type="radio" name="rc"> RC 2 N</label>
+          <label class="check-item"><input type="radio" name="rc"> RC 2</label>
+          <label class="check-item"><input type="radio" name="rc"> RC 3</label>
+          <label class="check-item"><input type="radio" name="rc"> RC 4</label>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-row">
+        <span class="field-label">Zargenart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="zargenart"> Eckzarge</label>
+          <label class="check-item"><input type="radio" name="zargenart"> Eck- und Gegenzarge</label>
+          <label class="check-item"><input type="radio" name="zargenart"> 2-schalige Umfassungszarge</label>
+          <label class="check-item"><input type="radio" name="zargenart"> Blockzarge (Einbau in der Öffnung)</label>
+          <label class="check-item"><input type="radio" name="zargenart"> Blockzarge (Einbau neben der Öffnung)</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Mauer-/Wandstärke (mm)</span>
+        <input class="field-input" id="field-mauerstaerke" type="number" placeholder="—" style="max-width:140px;">
+      </div>
+      <div class="field-row cond-hidden" id="row-rohrrahmen" data-cond="rohrrahmen">
+        <span class="field-label">Rohrrahmen-Verbreiterung</span>
+        <div class="rr-widen">
+          <div class="field-note">Es zählt das Rahmenaußenmaß. Verbreiterungen ggf. je Seite in mm angeben.</div>
+          <div class="rr-widen-grid">
+            <label class="rr-widen-item">Rechts<input class="field-input rr-input" id="field-rr-rechts" type="number" placeholder="0"><span class="rr-unit">mm</span></label>
+            <label class="rr-widen-item">Links<input class="field-input rr-input" id="field-rr-links" type="number" placeholder="0"><span class="rr-unit">mm</span></label>
+            <label class="rr-widen-item">Oben<input class="field-input rr-input" id="field-rr-oben" type="number" placeholder="0"><span class="rr-unit">mm</span></label>
+          </div>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="field-row">
+        <span class="field-label">Lichtausschnitt</span>
+        <div class="check-group">
+          <label class="check-item"><input type="checkbox" name="lichtausschnitt"> vorhanden</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Lüftungsgitter</span>
+        <div class="check-group">
+          <label class="check-item"><input type="checkbox" name="lueftungsgitter"> vorhanden</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Position / Maße</span>
+        <div class="lg-sketch-wrap">
+          <canvas class="draw-canvas" id="lgSketchCanvas"></canvas>
+          <div class="lg-sketch-hint">Position &amp; Maße von Lichtausschnitt / Lüftungsgitter einzeichnen<br><small>besonders im Randbereich des Türblatts</small></div>
+        </div>
+      </div>
+      <div class="draw-toolbar">
+        <button class="btn btn-secondary" style="font-size:11px;padding:6px 14px;box-shadow:none;" onclick="clearLgSketch()">
+          🗑️ Zeichnung löschen
+        </button>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Sonstige Angaben</span>
+        <input class="field-input" type="text" placeholder="z. B. Glasausschnitt, Spion, Briefkastenschlitz …">
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3 ANSCHLAG / ÖFFNUNGSRICHTUNG -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">3</span> Anschlag / Öffnungsrichtung</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="field-row">
+        <span class="field-label">Anschlagart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="anschlag"> Normalanschlag</label>
+          <label class="check-item"><input type="radio" name="anschlag"> Gegenfalz-Anschlag</label>
+          <label class="check-item"><input type="radio" name="anschlag"> Stumpf einschlagend</label>
+        </div>
+      </div>
+
+      <!-- DIN SVG CARDS -->
+      <div class="din-grid">
+
+        <!-- DIN LINKS -->
+        <div class="din-card" id="din-l" onclick="selectDIN('L')">
+          <div class="din-card-header">
+            <input type="radio" name="din" value="L" id="r-din-l">
+            <strong>DIN Links (DIN L)</strong>
+          </div>
+          <div class="din-svg-wrap">
+            <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DIN Links Schemazeichnung" id="svg-din-l">
+              <defs>
+                <marker id="arr-l" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#001B43"/>
+                </marker>
+              </defs>
+              <!-- Wandöffnung -->
+              <rect x="10" y="10" width="140" height="180" rx="2" fill="#EEF2F8" stroke="#D2DAE3" stroke-width="1.5"/>
+              <!-- Zarge links (Bandseite) - fest -->
+              <rect x="10" y="10" width="14" height="180" fill="#C8D8E8" stroke="#8BA3BA" stroke-width="1"/>
+              <!-- Türblatt-Gruppe: dreht um Bandpunkt links oben (24,18) -->
+              <g id="door-l" style="transform-origin:24px 18px; transform:rotate(0deg);">
+                <!-- Schwenkbogen (statisch, Andeutung) -->
+                <path d="M114 18 A90 90 0 0 1 114 182" fill="none" stroke="#001B43" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.25"/>
+                <!-- Türblatt -->
+                <rect class="tuer-blatt" x="24" y="18" width="90" height="164" rx="2" fill="#DDEAF3" stroke="#001B43" stroke-width="2"/>
+                <rect x="24" y="18" width="90" height="8" fill="#001B43" opacity="0.12"/>
+                <rect x="24" y="174" width="90" height="8" fill="#001B43" opacity="0.12"/>
+                <!-- Drücker rechts -->
+                <circle cx="106" cy="100" r="5" fill="#001B43"/>
+                <rect x="111" y="97" width="14" height="6" rx="3" fill="#001B43"/>
+                <!-- Schloss -->
+                <rect x="110" y="88" width="6" height="24" rx="1" fill="none" stroke="#001B43" stroke-width="1.5"/>
+              </g>
+              <!-- Bänder links (fest an Zarge) -->
+              <rect x="18" y="30" width="12" height="18" rx="1" fill="#001B43"/>
+              <rect x="18" y="91" width="12" height="18" rx="1" fill="#001B43"/>
+              <rect x="18" y="152" width="12" height="18" rx="1" fill="#001B43"/>
+              <line x1="10" y1="39" x2="18" y2="39" stroke="#001B43" stroke-width="2"/>
+              <line x1="10" y1="100" x2="18" y2="100" stroke="#001B43" stroke-width="2"/>
+              <line x1="10" y1="161" x2="18" y2="161" stroke="#001B43" stroke-width="2"/>
+              <!-- Labels -->
+              <text x="6" y="8" font-family="-apple-system, sans-serif" font-size="8" fill="#6B7A8D" font-weight="600">BAND</text>
+              <text x="118" y="108" font-family="-apple-system, sans-serif" font-size="8" fill="#001B43" id="lbl-griff-l">Griff</text>
+              <text x="130" y="55" font-family="-apple-system, sans-serif" font-size="7.5" fill="#001B43" opacity="0.7">öffnet</text>
+            </svg>
+          </div>
+          <div class="din-caption">
+            <strong>Bänder links · Griff rechts</strong><br>
+            Ansicht von der Bedienseite · Tür öffnet von sich weg
+          </div>
+        </div>
+
+        <!-- DIN RECHTS -->
+        <div class="din-card" id="din-r" onclick="selectDIN('R')">
+          <div class="din-card-header">
+            <input type="radio" name="din" value="R" id="r-din-r">
+            <strong>DIN Rechts (DIN R)</strong>
+          </div>
+          <div class="din-svg-wrap">
+            <svg viewBox="0 0 160 200" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="DIN Rechts Schemazeichnung" id="svg-din-r">
+              <defs>
+                <marker id="arr-r" markerWidth="8" markerHeight="8" refX="4" refY="4" orient="auto">
+                  <path d="M0,0 L8,4 L0,8 Z" fill="#001B43"/>
+                </marker>
+              </defs>
+              <!-- Wandöffnung -->
+              <rect x="10" y="10" width="140" height="180" rx="2" fill="#EEF2F8" stroke="#D2DAE3" stroke-width="1.5"/>
+              <!-- Zarge rechts (Bandseite) - fest -->
+              <rect x="136" y="10" width="14" height="180" fill="#C8D8E8" stroke="#8BA3BA" stroke-width="1"/>
+              <!-- Türblatt-Gruppe: dreht um Bandpunkt rechts oben (136,18) -->
+              <g id="door-r" style="transform-origin:136px 18px; transform:rotate(0deg);">
+                <!-- Schwenkbogen -->
+                <path d="M46 18 A90 90 0 0 0 46 182" fill="none" stroke="#001B43" stroke-width="0.8" stroke-dasharray="4 3" opacity="0.25"/>
+                <!-- Türblatt -->
+                <rect class="tuer-blatt" x="46" y="18" width="90" height="164" rx="2" fill="#DDEAF3" stroke="#001B43" stroke-width="2"/>
+                <rect x="46" y="18" width="90" height="8" fill="#001B43" opacity="0.12"/>
+                <rect x="46" y="174" width="90" height="8" fill="#001B43" opacity="0.12"/>
+                <!-- Drücker links -->
+                <circle cx="54" cy="100" r="5" fill="#001B43"/>
+                <rect x="35" y="97" width="14" height="6" rx="3" fill="#001B43"/>
+                <!-- Schloss -->
+                <rect x="44" y="88" width="6" height="24" rx="1" fill="none" stroke="#001B43" stroke-width="1.5"/>
+              </g>
+              <!-- Bänder rechts (fest an Zarge) -->
+              <rect x="130" y="30" width="12" height="18" rx="1" fill="#001B43"/>
+              <rect x="130" y="91" width="12" height="18" rx="1" fill="#001B43"/>
+              <rect x="130" y="152" width="12" height="18" rx="1" fill="#001B43"/>
+              <line x1="142" y1="39" x2="150" y2="39" stroke="#001B43" stroke-width="2"/>
+              <line x1="142" y1="100" x2="150" y2="100" stroke="#001B43" stroke-width="2"/>
+              <line x1="142" y1="161" x2="150" y2="161" stroke="#001B43" stroke-width="2"/>
+              <!-- Labels -->
+              <text x="133" y="8" font-family="-apple-system, sans-serif" font-size="8" fill="#6B7A8D" font-weight="600">BAND</text>
+              <text x="22" y="108" font-family="-apple-system, sans-serif" font-size="8" fill="#001B43">Griff</text>
+              <text x="8" y="55" font-family="-apple-system, sans-serif" font-size="7.5" fill="#001B43" opacity="0.7">öffnet</text>
+            </svg>
+          </div>
+          <div class="din-caption">
+            <strong>Bänder rechts · Griff links</strong><br>
+            Ansicht von der Bedienseite · Tür öffnet von sich weg
+          </div>
+        </div>
+
+      </div>
+
+      <div class="field-row" style="margin-top:8px;">
+        <span class="field-label">Bemerkung / Lage</span>
+        <input class="field-input" type="text" placeholder="Freihand-Hinweis zur Raumlage …">
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4 MASSE -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">4</span> Maße <span style="font-size:10px;font-weight:400;margin-left:4px;">(alle Angaben in mm)</span></span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body" style="padding:12px 14px;">
+      <div class="mass-grid">
+        <div class="mass-group">
+          <div class="mass-group-title">Türblatt</div>
+          <div class="mass-row"><span class="mass-label">Breite <span class="mass-abbr">(B)</span></span><input class="mass-input" id="mi-tuerblatt-b" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Höhe <span class="mass-abbr">(H)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Dicke <span class="mass-abbr">(D)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+        </div>
+        <div class="mass-group">
+          <div class="mass-group-title">Falzmaße</div>
+          <div class="mass-row"><span class="mass-label">Falzbreite <span class="mass-abbr">(FB)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Falztiefe <span class="mass-abbr">(FT)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Bandfalzbreite</span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Schlossfachbreite</span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+        </div>
+        <div class="mass-group">
+          <div class="mass-group-title">Zargenmaße</div>
+          <div class="mass-row"><span class="mass-label">Zargenbreite <span class="mass-abbr">(ZB)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Zargenhöhe <span class="mass-abbr">(ZH)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Zargenstärke <span class="mass-abbr">(ZS)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+        </div>
+        <div class="mass-group">
+          <div class="mass-group-title">Rohbau / Baurichtmaß</div>
+          <div class="mass-row"><span class="mass-label">Rohbaumaß Breite <span class="mass-abbr">(RB-B)</span></span><input class="mass-input" id="mi-rohbau-b" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Rohbaumaß Höhe <span class="mass-abbr">(RB-H)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Baurichtmaß Breite <span class="mass-abbr">(BRM-B)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+          <div class="mass-row"><span class="mass-label">Baurichtmaß Höhe <span class="mass-abbr">(BRM-H)</span></span><input class="mass-input" type="number" placeholder="—"><span class="mass-unit">mm</span></div>
+        </div>
+      </div><!-- end mass-grid -->
+
+      <!-- Bandabstände mit Skizze -->
+      <div class="band-block" id="band-block">
+        <div class="band-block-title">Bandabstände</div>
+        <div class="band-block-inner">
+          <div class="band-sketch-wrap">
+            <svg class="band-sketch-svg" viewBox="0 0 300 220" preserveAspectRatio="xMidYMid meet" xmlns="http://www.w3.org/2000/svg">
+              <!-- Oberkante / Unterkante Referenzlinien -->
+              <line x1="120" y1="24" x2="235" y2="24" stroke="#9AA7B5" stroke-width="1" stroke-dasharray="3 3"/>
+              <line x1="120" y1="196" x2="235" y2="196" stroke="#9AA7B5" stroke-width="1" stroke-dasharray="3 3"/>
+              <text x="238" y="27" font-size="9" fill="#6B7A8D" font-family="Arial">OK</text>
+              <text x="238" y="199" font-size="9" fill="#6B7A8D" font-family="Arial">UK</text>
+              <!-- Türblatt -->
+              <rect x="128" y="24" width="100" height="172" rx="2" fill="#F4F7FB" stroke="#1A4A6B" stroke-width="1.4"/>
+              <!-- Bandseite (Scharnierseite links) -->
+              <line x1="128" y1="24" x2="128" y2="196" stroke="#1A4A6B" stroke-width="3"/>
+              <!-- Bänder -->
+              <rect x="122" y="46" width="12" height="14" rx="1.5" fill="#D95E1F"/>
+              <rect x="122" y="103" width="12" height="14" rx="1.5" fill="#D95E1F"/>
+              <rect x="122" y="160" width="12" height="14" rx="1.5" fill="#D95E1F"/>
+              <!-- Maßpfeil OK -> oberes Band -->
+              <line x1="92" y1="24" x2="92" y2="53" stroke="#6B7A8D" stroke-width="0.8"/>
+              <polygon points="92,24 89.5,30 94.5,30" fill="#6B7A8D"/>
+              <polygon points="92,53 89.5,47 94.5,47" fill="#6B7A8D"/>
+              <!-- Maßpfeil UK -> unteres Band -->
+              <line x1="92" y1="167" x2="92" y2="196" stroke="#6B7A8D" stroke-width="0.8"/>
+              <polygon points="92,196 89.5,190 94.5,190" fill="#6B7A8D"/>
+              <polygon points="92,167 89.5,173 94.5,173" fill="#6B7A8D"/>
+              <!-- Leader mittleres Band -->
+              <line x1="92" y1="110" x2="120" y2="110" stroke="#6B7A8D" stroke-width="0.8" stroke-dasharray="2 2"/>
+            </svg>
+            <label class="band-fld band-fld-ob"><span>oberes Band<small>von OK</small></span><input id="mi-band-ob" type="number" placeholder="—"><em>mm</em></label>
+            <label class="band-fld band-fld-mid"><span>mittleres Band</span><input id="mi-band-mid" type="number" placeholder="—"><em>mm</em></label>
+            <label class="band-fld band-fld-un"><span>unteres Band<small>von UK</small></span><input id="mi-band-un" type="number" placeholder="—"><em>mm</em></label>
+          </div>
+          <div class="band-anz">
+            <label>Anzahl Bänder<input id="mi-band-anz" type="number" placeholder="—" min="1" max="6"><em>Stk.</em></label>
+          </div>
+        </div>
+      </div>
+
+      <div class="val-warning" id="val-mass-warn">
+        ⚠ Türblatt-Breite ist größer als Rohbaumaß-Breite – bitte prüfen.
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">5</span> Beschläge</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="field-row">
+        <span class="field-label">Bandtyp</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="band"> Bettleband</label>
+          <label class="check-item"><input type="radio" name="band"> Rollenband</label>
+          <label class="check-item"><input type="radio" name="band"> Verdecktband</label>
+          <label class="check-item"><input type="radio" name="band"> Klotzband</label>
+          <label class="check-item"><input type="radio" name="band"> Konstruktionsband</label>
+          <label class="check-item"><input type="radio" name="band"> 3-D Band</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Band-Fabrikat / Typ</span>
+        <input class="field-input" type="text" list="dl-band" placeholder="z. B. Simonswerk TECTUS, Dorma …">
+        <datalist id="dl-band">
+          <option value="Simonswerk TECTUS TE 540 3D">
+          <option value="Simonswerk TECTUS TE 640 3D">
+          <option value="Dorma RTS 85 N">
+          <option value="Dorma STUDIO 3D">
+          <option value="Dormakaba Siku 3-D">
+          <option value="Assa Abloy Cisa 3D">
+          <option value="FDB Bettleband">
+          <option value="Siku Rollenband">
+          <option value="Hawa Pivota">
+        </datalist>
+      </div>
+      <div class="divider"></div>
+      <div class="field-row">
+        <span class="field-label">Schlossbauart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="schloss"> Einsteckschloss</label>
+          <label class="check-item"><input type="radio" name="schloss"> Panikschloss</label>
+          <label class="check-item"><input type="radio" name="schloss"> Riegelschloss</label>
+          <label class="check-item"><input type="radio" name="schloss"> Magnetschloss</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Panikart</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="panikart"> Panikstange – DIN EN 1125</label>
+          <label class="check-item"><input type="radio" name="panikart"> Notausgangsverschluss, Typ A (Drücker) – DIN EN 179</label>
+          <label class="check-item"><input type="radio" name="panikart"> Notausgangsverschluss, Typ B (Stoßplatte) – DIN EN 179</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Schloss-Fabrikat / Typ</span>
+        <input class="field-input" type="text" list="dl-schloss" placeholder="z. B. Wilka, ASSA ABLOY …">
+        <datalist id="dl-schloss">
+          <option value="BKS Janus 46">
+          <option value="BKS Janus 44">
+          <option value="Wilka 3600">
+          <option value="Wilka 3605">
+          <option value="ASSA ABLOY 335">
+          <option value="Dormakaba 8000">
+          <option value="Glutz 56005">
+          <option value="Dorma BTS 75V">
+          <option value="Eff-Eff Panikschloss">
+          <option value="FSB 8012">
+          <option value="Roto NT">
+        </datalist>
+      </div>
+      <div class="field-row double">
+        <span class="field-label">Dorn-Maß</span>
+        <input class="field-input" type="number" placeholder="—" style="max-width:100px;">
+        <span class="field-label">Stulphöhe</span>
+        <input class="field-input" type="number" placeholder="—" style="max-width:100px;">
+      </div>
+      <div class="divider"></div>
+      <div class="field-row">
+        <span class="field-label">Drückergarnitur</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="druecker"> Langschild</label>
+          <label class="check-item"><input type="radio" name="druecker"> Kurzschild</label>
+          <label class="check-item"><input type="radio" name="druecker"> Rosettengarnitur</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Drücker-Fabrikat / Typ</span>
+        <input class="field-input" type="text" list="dl-druecker" placeholder="z. B. FSB 1076, Hoppe Amsterdam …">
+        <datalist id="dl-druecker">
+          <option value="FSB 1076 Edelstahl">
+          <option value="FSB 1146 Edelstahl matt">
+          <option value="Hoppe Amsterdam E42/42H">
+          <option value="Hoppe Toulon E1400Z">
+          <option value="ASSA ABLOY Bever">
+          <option value="Griffwerk Retro">
+          <option value="Karcher Design EV1">
+          <option value="Dormakaba Favorit">
+          <option value="Olivari Onda">
+        </datalist>
+      </div>
+      <div class="divider"></div>
+      <div class="field-row">
+        <span class="field-label">Schließzylinder</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="zylinder"> Profilzylinder</label>
+          <label class="check-item"><input type="radio" name="zylinder"> Halbzylinder</label>
+          <label class="check-item"><input type="radio" name="zylinder"> Blindzylinder</label>
+          <label class="check-item"><input type="radio" name="zylinder"> Keiner</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Schließanlage / Gruppe</span>
+        <input class="field-input" type="text" placeholder="z. B. MK1, Generalschließung …">
+      </div>
+      <div class="field-row">
+        <span class="field-label">Türschließer</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="schliess"> Kein</label>
+          <label class="check-item"><input type="radio" name="schliess"> Obenband-Türschließer</label>
+          <label class="check-item"><input type="radio" name="schliess"> Eingebaut (i. Blatt)</label>
+          <label class="check-item"><input type="radio" name="schliess"> Bodenanker</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Feststellung</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="feststellung"> Keine</label>
+          <label class="check-item"><input type="radio" name="feststellung"> Mechanisch</label>
+          <label class="check-item"><input type="radio" name="feststellung"> Elektro-Mechanisch</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Montageort Feststellung</span>
+        <div class="check-group">
+          <label class="check-item"><input type="radio" name="montageort"> Bandseite</label>
+          <label class="check-item"><input type="radio" name="montageort"> Bandgegenseite</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Sonstige Beschläge</span>
+        <input class="field-input" type="text" placeholder="z. B. Wandpuffer, Koordinator, Fingerschutz …">
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 6 SKIZZE -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">6</span> Skizze &amp; Maßeintragung</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="sketch-area" id="sketchArea">
+        <div class="sketch-hint">
+          <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+            <path d="M12 20h9M16.5 3.5a2.121 2.121 0 013 3L7 19l-4 1 1-4L16.5 3.5z"/>
+          </svg>
+          Freihand-Zeichenfläche<br><small>Apple Pencil / Stylus / Finger · oder Foto einfügen</small>
+        </div>
+        <canvas class="draw-canvas" id="sketchCanvas"></canvas>
+        <input type="file" id="sketchFile" accept="image/*" style="display:none" onchange="loadSketch(event)">
+      </div>
+      <div class="draw-toolbar">
+        <button class="btn btn-secondary" style="font-size:11px;padding:6px 14px;box-shadow:none;" onclick="document.getElementById('sketchFile').click()">
+          📎 Skizze als Bild laden
+        </button>
+        <button class="btn btn-secondary" style="font-size:11px;padding:6px 14px;box-shadow:none;" onclick="clearSketch()">
+          🗑️ Skizze löschen
+        </button>
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- 7 FOTODOKUMENTATION -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">7</span> Fotodokumentation</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="foto-grid">
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Bandseite</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Schlossseite</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Schlosshöhe / Detail</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Zargenanschluss oben</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Zargenanschluss unten</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+        <div class="foto-slot" onclick="triggerFile(this)">
+          <div class="icon">📷</div><label>Schäden / Besonderheiten</label>
+          <input type="file" accept="image/*" onchange="loadFoto(event, this.parentElement)">
+        </div>
+      </div>
+      <div class="section-next-wrap">
+        <button type="button" class="btn-next-section" onclick="nextSection(this)">Weiter <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 6l6 6-6 6"/></svg></button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 8 ABSCHLUSS -->
+  <div class="section">
+    <div class="section-title" onclick="toggleSection(this)"><span class="section-title-left"><span class="num">8</span> Abschluss &amp; Unterschrift</span><svg class="section-chevron" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M6 9l6 6 6-6"/></svg></div>
+    <div class="section-body">
+      <div class="field-row">
+        <span class="field-label">Prüfung</span>
+        <div class="check-group">
+          <label class="check-item"><input type="checkbox"> Alle Maße geprüft</label>
+          <label class="check-item"><input type="checkbox"> Fotos vorhanden</label>
+          <label class="check-item"><input type="checkbox"> Checkliste vollständig</label>
+        </div>
+      </div>
+      <div class="field-row">
+        <span class="field-label">Bemerkungen</span>
+        <textarea class="field-input" rows="3" placeholder="Freitext, Rückfragen, Auffälligkeiten …"></textarea>
+      </div>
+      <div class="sign-grid">
+        <div class="sign-box">
+          <label>Aufgenommen von</label>
+          <div class="sign-canvas-wrap">
+            <canvas class="draw-canvas sign-canvas" id="signCanvas1"></canvas>
+          </div>
+          <button class="btn btn-secondary sign-clear-btn" onclick="clearSignature('signCanvas1')">🗑️ Unterschrift löschen</button>
+          <div class="sign-line">Name, Unterschrift, Datum</div>
+        </div>
+        <div class="sign-box">
+          <label>Bestätigt durch Auftraggeber</label>
+          <div class="sign-canvas-wrap">
+            <canvas class="draw-canvas sign-canvas" id="signCanvas2"></canvas>
+          </div>
+          <button class="btn btn-secondary sign-clear-btn" onclick="clearSignature('signCanvas2')">🗑️ Unterschrift löschen</button>
+          <div class="sign-line">Name, Unterschrift, Datum</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="doc-footer">
+    <span>Türblatt Aufmaß · Aufnahmeprotokoll · Version 1.6 &nbsp;·&nbsp; <span id="footer-credit"></span></span>
+    <span id="pdf-filename-preview" class="pdf-filename-hint">Tuerblatt_Aufmass_YYYY-MM-DD.pdf</span>
+  </div>
+
+</div>
+
+<!-- FLOATING ACTIONS -->
+<div class="actions">
+  <button class="btn btn-email" onclick="checkPayment('email')">✉️ Per E-Mail versenden</button>
+  <button class="btn btn-export" onclick="checkPayment('save')">⬇ PDF exportieren</button>
+</div>
+
+<script>
+// ── TOP-LEVEL VARIABLE DECLARATIONS (hoisted to avoid TDZ errors) ──
+const AUTOSAVE_KEY = 'aufmass_autosave_v1';
+const AUTOSAVE_META_KEY = 'aufmass_autosave_meta';
+let autosaveTimer = null;
+let pendingRestore = null;
+let doorPanels = [];
+let activeDoorIndex = 0;
+let deferredInstallPrompt = null;
+
+// Admin + Employee Codes
+const ADMIN_CODE = atob('NzhPOA==');
+const EMPLOYEE_CODES_KEY = 'aufmass_employee_codes';
+const DEFAULT_EMPLOYEE_CODES = (function(){
+  const _d = atob, _k = [
+    'NzgwODA=','NzgwODE=','NzgwODI=','NzgwODQ=',
+    'NzgwODU=','NzgwODY=','NzgwODc=','NzgwODg='
+  ], _v = [
+    'TWFya28gR2VyZGF1','Tm9yYmVydCBDbG91cg==','VGVjaG5pa2Vy',
+    'QmVybmQgTmlrb2xhdXM=','QXJtaW4gQm9seg==','QXVzc2VuZGllbnN0MQ==',
+    'QXVzc2VuZGllbnN0Mg==','QXXDn2VuZGllbnN0IDM='
+  ], o = {};
+  _k.forEach((k,i) => { o[_d(k)] = _d(_v[i]); });
+  return o;
+})();
+function loadEmployeeCodes() {
+  try {
+    const saved = localStorage.getItem(EMPLOYEE_CODES_KEY);
+    if (saved) return JSON.parse(saved);
+  } catch(e) {}
+  return Object.assign({}, DEFAULT_EMPLOYEE_CODES);
+}
+function saveEmployeeCodes(codes) {
+  try { localStorage.setItem(EMPLOYEE_CODES_KEY, JSON.stringify(codes)); } catch(e) {}
+}
+let EMPLOYEE_CODES = loadEmployeeCodes();
+
+// Payment gate
+const PAYPAL_ME = atob('aHR0cHM6Ly93d3cucGF5cGFsLm1lL21hcmtvNDM2LzAuMDlFVVI=');
+let paypalClicked = false;
+let pendingExportMode = 'save';
+let verifiedEmployeeCode = '';
+
+// ── INIT ──────────────────────────────────────────────
+// (footer-date and field-datum are set in DOMContentLoaded below)
+
+// ── DIN SELECTION ─────────────────────────────────────
+// ── DIN SELECTION + DOOR ANIMATION ───────────────────
+// CSS perspective + rotateY um die Bandkante.
+// DIN L: Band links  → rotateY positiv  (Griffseite schwingt von Betrachter weg nach rechts)
+// DIN R: Band rechts → rotateY negativ  (Griffseite schwingt von Betrachter weg nach links)
+
+function animateDoor(side, open) {
+  const svgEl = document.getElementById(side === 'L' ? 'svg-din-l' : 'svg-din-r');
+  if (!svgEl) return;
+
+  const startProg = parseFloat(svgEl.dataset.prog || '0');
+  const targetProg = open ? 1 : 0;
+  const duration = 500;
+  const startTime = performance.now();
+
+  // Wrapper braucht perspective damit rotateY 3D wirkt
+  const wrap = svgEl.closest('.din-svg-wrap');
+  if (wrap) wrap.style.perspective = '400px';
+
+  function easeInOut(t) { return t < 0.5 ? 2*t*t : 1 - Math.pow(-2*t+2, 2)/2; }
+
+  function applyTransform(prog) {
+    // Tür öffnet bis 70° von sich weg
+    const angle = prog * 70;
+
+    if (side === 'L') {
+      // Band links = linke Kante fixiert → transform-origin links
+      svgEl.style.transformOrigin = 'left center';
+      svgEl.style.transform = `rotateY(${angle}deg)`;
+    } else {
+      // Band rechts = rechte Kante fixiert → transform-origin rechts
+      svgEl.style.transformOrigin = 'right center';
+      svgEl.style.transform = `rotateY(${-angle}deg)`;
+    }
+  }
+
+  function step(now) {
+    const t = Math.min((now - startTime) / duration, 1);
+    const prog = startProg + (targetProg - startProg) * easeInOut(t);
+    applyTransform(prog);
+    svgEl.dataset.prog = String(prog);
+    if (t < 1) requestAnimationFrame(step);
+  }
+  requestAnimationFrame(step);
+}
+
+function selectDIN(side) {
+  const cardL = document.getElementById('din-l');
+  const cardR = document.getElementById('din-r');
+  const wasSelected = (side === 'L' ? cardL : cardR).classList.contains('selected');
+
+  cardL.classList.toggle('selected', side === 'L');
+  cardR.classList.toggle('selected', side === 'R');
+  document.getElementById('r-din-' + side.toLowerCase()).checked = true;
+
+  if (side === 'L') {
+    animateDoor('L', !wasSelected);
+    animateDoor('R', false);
+  } else {
+    animateDoor('R', !wasSelected);
+    animateDoor('L', false);
+  }
+}
+
+// ── PHOTO UPLOAD ──────────────────────────────────────
+function triggerFile(slot) { slot.querySelector('input[type="file"]').click(); }
+function loadFoto(event, slot) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  let img = slot.querySelector('img');
+  if (!img) { img = document.createElement('img'); slot.appendChild(img); }
+  img.src = url;
+  slot.querySelector('.icon').style.display = 'none';
+  slot.querySelector('label').style.display = 'none';
+}
+
+// ── SKETCH UPLOAD ─────────────────────────────────────
+function loadSketch(event) {
+  const file = event.target.files[0];
+  if (!file) return;
+  const url = URL.createObjectURL(file);
+  const area = document.getElementById('sketchArea');
+  area.style.backgroundImage = `url(${url})`;
+  area.style.backgroundSize = 'contain';
+  area.style.backgroundRepeat = 'no-repeat';
+  area.style.backgroundPosition = 'center';
+  area.querySelector('.sketch-hint').style.display = 'none';
+  // An uploaded photo replaces any existing freehand sketch on this canvas
+  clearSketch();
+}
+
+// ── FREEHAND DRAWING (Apple Pencil / Stylus / Finger / Mouse) ──────────
+// Uses Pointer Events, which iPadOS Safari reports for Apple Pencil with
+// pressure (event.pressure) and pointerType === 'pen'. Each canvas is
+// backed at devicePixelRatio resolution so lines stay crisp, while the
+// drawing coordinate space stays in CSS pixels for simplicity.
+const drawCanvases = {}; // id -> { canvas, ctx, hasInk }
+
+function setupDrawCanvas(canvas, opts) {
+  opts = opts || {};
+  const ctx = canvas.getContext('2d');
+  const state = { canvas, ctx, hasInk: false, drawing: false, lastX: 0, lastY: 0 };
+  drawCanvases[canvas.id] = state;
+
+  function resize() {
+    const rect = canvas.getBoundingClientRect();
+    if (rect.width === 0 || rect.height === 0) return;
+    // Preserve existing drawing across resizes (e.g. orientation change)
+    let snapshot = null;
+    if (canvas.width > 0 && canvas.height > 0 && state.hasInk) {
+      snapshot = document.createElement('canvas');
+      snapshot.width = canvas.width;
+      snapshot.height = canvas.height;
+      snapshot.getContext('2d').drawImage(canvas, 0, 0);
+    }
+    const dpr = window.devicePixelRatio || 1;
+    canvas.width = Math.round(rect.width * dpr);
+    canvas.height = Math.round(rect.height * dpr);
+    ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.strokeStyle = '#001B43';
+    if (snapshot) {
+      ctx.drawImage(snapshot, 0, 0, snapshot.width, snapshot.height, 0, 0, rect.width, rect.height);
+    }
+  }
+
+  function getPos(e) {
+    const rect = canvas.getBoundingClientRect();
+    return { x: e.clientX - rect.left, y: e.clientY - rect.top };
+  }
+
+  function lineWidthFor(e) {
+    // Apple Pencil reports pressure 0..1 (0.5 default); widen slightly with pressure.
+    const base = 2;
+    if (e.pointerType === 'pen' && e.pressure > 0) {
+      return base + e.pressure * 2.5;
+    }
+    return base + 0.5;
+  }
+
+  function pointerDown(e) {
+    // Allow multi-touch scrolling/zoom to pass through unless it's a pen
+    // or the primary touch/mouse pointer.
+    if (!e.isPrimary) return;
+    e.preventDefault();
+    canvas.setPointerCapture && canvas.setPointerCapture(e.pointerId);
+    state.drawing = true;
+    const pos = getPos(e);
+    state.lastX = pos.x;
+    state.lastY = pos.y;
+    // Draw a dot for simple taps
+    ctx.beginPath();
+    ctx.arc(pos.x, pos.y, lineWidthFor(e) / 2, 0, Math.PI * 2);
+    ctx.fillStyle = '#001B43';
+    ctx.fill();
+    state.hasInk = true;
+    if (opts.onDraw) opts.onDraw();
+  }
+
+  function pointerMove(e) {
+    if (!state.drawing || !e.isPrimary) return;
+    e.preventDefault();
+    const pos = getPos(e);
+    ctx.lineWidth = lineWidthFor(e);
+    ctx.beginPath();
+    ctx.moveTo(state.lastX, state.lastY);
+    ctx.lineTo(pos.x, pos.y);
+    ctx.stroke();
+    state.lastX = pos.x;
+    state.lastY = pos.y;
+    state.hasInk = true;
+  }
+
+  function pointerUp(e) {
+    if (!e.isPrimary) return;
+    state.drawing = false;
+    canvas.releasePointerCapture && e.pointerId != null && canvas.hasPointerCapture && canvas.hasPointerCapture(e.pointerId) && canvas.releasePointerCapture(e.pointerId);
+  }
+
+  canvas.addEventListener('pointerdown', pointerDown);
+  canvas.addEventListener('pointermove', pointerMove);
+  canvas.addEventListener('pointerup', pointerUp);
+  canvas.addEventListener('pointercancel', pointerUp);
+  canvas.addEventListener('pointerleave', pointerUp);
+
+  window.addEventListener('resize', resize);
+  // Initial size (after layout settles)
+  requestAnimationFrame(resize);
+  state.resize = resize;
+  return state;
+}
+
+function clearCanvas(state) {
+  if (!state) return;
+  const { canvas, ctx } = state;
+  ctx.save();
+  ctx.setTransform(1, 0, 0, 1, 0, 0);
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+  ctx.restore();
+  state.hasInk = false;
+}
+
+function clearSketch() {
+  clearCanvas(drawCanvases['sketchCanvas']);
+  const area = document.getElementById('sketchArea');
+  // Clear any uploaded background image too
+  area.style.backgroundImage = '';
+  area.querySelector('.sketch-hint').style.display = '';
+}
+
+function clearSignature(id) {
+  clearCanvas(drawCanvases[id]);
+}
+
+function clearLgSketch() {
+  clearCanvas(drawCanvases['lgSketchCanvas']);
+  const hint = document.querySelector('.lg-sketch-hint');
+  if (hint) hint.style.display = '';
+}
+
+// Hide the sketch hint as soon as the user starts drawing
+function initSketchHintToggle() {
+  const sketchState = drawCanvases['sketchCanvas'];
+  const hint = document.querySelector('#sketchArea .sketch-hint');
+  if (!sketchState || !hint) return;
+  const canvas = sketchState.canvas;
+  canvas.addEventListener('pointerdown', () => { hint.style.display = 'none'; });
+}
+
+// Hide the Lichtausschnitt/Lüftungsgitter sketch hint once drawing starts
+function initLgSketchHintToggle() {
+  const state = drawCanvases['lgSketchCanvas'];
+  const hint = document.querySelector('.lg-sketch-hint');
+  if (!state || !hint) return;
+  state.canvas.addEventListener('pointerdown', () => { hint.style.display = 'none'; });
+}
+
+// Initialize all drawing canvases
+function initDrawCanvases() {
+  setupDrawCanvas(document.getElementById('sketchCanvas'));
+  setupDrawCanvas(document.getElementById('signCanvas1'));
+  setupDrawCanvas(document.getElementById('signCanvas2'));
+  setupDrawCanvas(document.getElementById('lgSketchCanvas'));
+  initSketchHintToggle();
+  initLgSketchHintToggle();
+}
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initDrawCanvases);
+} else {
+  initDrawCanvases();
+}
+
+// ── GPS LOKALISIERUNG ─────────────────────────────────
+function getGPS() {
+  const btn = document.getElementById('gps-btn');
+  const status = document.getElementById('gps-status');
+  const adresse = document.getElementById('field-adresse');
+
+  if (!navigator.geolocation) {
+    status.textContent = '⚠ GPS nicht verfügbar in diesem Browser.';
+    return;
+  }
+
+  btn.disabled = true;
+  btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="animation:spin 0.8s linear infinite"><circle cx="12" cy="12" r="10"/></svg> Ortung …`;
+  status.textContent = 'Standort wird ermittelt …';
+
+  navigator.geolocation.getCurrentPosition(
+    async (pos) => {
+      const lat = pos.coords.latitude.toFixed(6);
+      const lon = pos.coords.longitude.toFixed(6);
+      const acc = Math.round(pos.coords.accuracy);
+
+      status.innerHTML = `<span class="gps-coords">📍 ${lat}, ${lon} (±${acc} m)</span>`;
+
+      // Reverse geocoding via OpenStreetMap Nominatim (no API key needed)
+      try {
+        const res = await fetch(
+          `https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=${lat}&lon=${lon}&accept-language=de`,
+          { headers: { 'User-Agent': 'TuerblattAufmass/1.0' } }
+        );
+        const data = await res.json();
+        const a = data.address;
+        const parts = [
+          a.road && a.house_number ? `${a.road} ${a.house_number}` : a.road,
+          a.postcode,
+          a.city || a.town || a.village || a.municipality
+        ].filter(Boolean);
+        const adresseStr = parts.join(', ');
+        adresse.value = adresseStr;
+        status.innerHTML = `<span class="gps-coords">📍 ${lat}, ${lon} (±${acc} m) · Adresse übernommen</span>`;
+      } catch(e) {
+        adresse.value = `${lat}, ${lon}`;
+        status.innerHTML = `<span class="gps-coords">📍 ${lat}, ${lon} (±${acc} m) · Koordinaten eingetragen</span>`;
+      }
+
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8" stroke-opacity="0.3"/></svg> GPS`;
+    },
+    (err) => {
+      const msgs = {1:'Zugriff verweigert – bitte GPS erlauben.', 2:'Standort nicht ermittelbar.', 3:'Zeitüberschreitung.'};
+      status.textContent = '⚠ ' + (msgs[err.code] || 'Fehler bei GPS-Ortung.');
+      btn.disabled = false;
+      btn.innerHTML = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/><circle cx="12" cy="12" r="8" stroke-opacity="0.3"/></svg> GPS`;
+    },
+    { timeout: 12000, maximumAge: 0, enableHighAccuracy: true }
+  );
+}
+
+// ── PDF EXPORT MIT WASSERZEICHEN (Mehrseiten, sektionsweise) ──
+// Build a full-page watermark image with repeated diagonal text, drawn
+// entirely on one canvas (avoids many small addImage calls in jsPDF, which
+// can trigger "IndexSizeError" on some mobile renderers when tiled).
+function buildWatermarkTile() {
+  // A4 ratio at a moderate resolution
+  const w = 800;
+  const h = Math.round(w * (297 / 210)); // ~1131
+  const c = document.createElement('canvas');
+  c.width = w; c.height = h;
+  const ctx = c.getContext('2d');
+  ctx.clearRect(0, 0, w, h);
+  ctx.fillStyle = 'rgba(0, 27, 67, 0.06)';
+  ctx.font = 'bold 30px Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+
+  ctx.save();
+  ctx.translate(w / 2, h / 2);
+  ctx.rotate(-Math.PI / 4); // -45deg
+
+  const stepY = 110;
+  const stepX = 260;
+  const rows = Math.ceil(h / stepY) + 4;
+  const cols = Math.ceil(w / stepX) + 4;
+  for (let r = -rows; r <= rows; r++) {
+    for (let cIdx = -cols; cIdx <= cols; cIdx++) {
+      ctx.fillText(atob('Q3JlYXRlZCBieSBNLkcu'), cIdx * stepX, r * stepY);
+    }
+  }
+  ctx.restore();
+
+  return c.toDataURL('image/png');
+}
+
+function drawWatermarkAndFooter(pdf, pageW, pageH, margin, watermarkTile, pageNum, totalPages) {
+  // Single full-page watermark image instead of many tiled addImage calls.
+  // Negative/overflowing coordinates in repeated addImage calls have been
+  // observed to trigger "IndexSizeError" on some mobile renderers.
+  try {
+    pdf.addImage(watermarkTile, 'PNG', 0, 0, pageW, pageH);
+  } catch (wmErr) {
+    console.error('Watermark draw failed:', wmErr);
+  }
+
+  pdf.setFont('helvetica', 'normal');
+  pdf.setFontSize(7);
+  pdf.setTextColor(150, 145, 138);
+  const dateStr = new Date().toLocaleDateString('de-DE', {day:'2-digit', month:'2-digit', year:'numeric'});
+  pdf.text(`Türblatt Aufmaß · Aufnahmeprotokoll · ${dateStr}`, margin, pageH - 5);
+  pdf.text(`Seite ${pageNum} / ${totalPages}`, pageW - margin, pageH - 5, { align: 'right' });
+  pdf.setFontSize(6.5);
+  pdf.setTextColor(180, 175, 168);
+  pdf.text(atob('Q3JlYXRlZCBieSBNLkcu'), pageW / 2, pageH - 5, { align: 'center' });
+}
+
+// Convert a canvas to a data URL and immediately free its backing memory.
+// On iOS Safari, repeated html2canvas calls leak canvas memory because the
+// cloned DOM/canvas objects aren't fully released (known WebKit issue).
+// Setting width/height to 0 after extracting the image data releases the
+// backing store immediately, reducing cumulative memory pressure across
+// many sections, which otherwise leads to "IndexSizeError" later in the
+// export (the error appears on whichever canvas operation happens to be
+// the one that crosses the memory limit, not necessarily a "broken" one).
+function toDataURLAndFree(canvas, type, quality) {
+  const data = canvas.toDataURL(type, quality);
+  canvas.width = 0;
+  canvas.height = 0;
+  return data;
+}
+
+// Render a single DOM element to canvas with a safe scale (avoids iOS canvas
+// area limits which trigger "IndexSizeError: The index is not in the allowed range")
+async function renderElementSafe(el, baseScale) {
+  const rect = el.getBoundingClientRect();
+  const MAX_DIM = 3500; // safe px ceiling per side for iOS Safari canvases
+  let scale = baseScale;
+  const longSide = Math.max(rect.width, rect.height);
+  if (longSide * scale > MAX_DIM) {
+    scale = Math.max(1, (MAX_DIM / longSide));
+  }
+  return html2canvas(el, { scale: scale, backgroundColor: '#ffffff', imageTimeout: 0, removeContainer: true });
+}
+
+// Some long sections (e.g. "Beschläge" with many field-rows and custom
+// radio/checkbox styling) can produce a tall canvas that triggers
+// "IndexSizeError" on certain mobile renderers, even below the MAX_DIM
+// per-side limit. As a safety measure, sections taller than CHUNK_THRESHOLD
+// (in CSS px) are split into smaller chunks and rendered separately, each
+// chunk repeating the section title for context.
+const SECTION_CHUNK_THRESHOLD = 900; // CSS px, before scaling (higher = fewer html2canvas calls = less iOS canvas-memory pressure)
+
+async function renderSectionChunks(section, baseScale) {
+  const rect = section.getBoundingClientRect();
+  if (rect.height <= SECTION_CHUNK_THRESHOLD) {
+    return [await renderElementSafe(section, baseScale)];
+  }
+
+  const body = section.querySelector('.section-body');
+  const titleEl = section.querySelector('.section-title');
+  if (!body || !titleEl) {
+    return [await renderElementSafe(section, baseScale)];
+  }
+
+  // Expand "container" children (like .din-grid or .foto-grid) into their
+  // own direct children so very large single elements can also be split.
+  const rawChildren = Array.from(body.children);
+  const children = [];
+  for (const child of rawChildren) {
+    const h = child.getBoundingClientRect().height;
+    if (h > SECTION_CHUNK_THRESHOLD * 1.5 &&
+        (child.classList.contains('din-grid') || child.classList.contains('foto-grid')) &&
+        child.children.length > 1) {
+      children.push(...Array.from(child.children));
+    } else {
+      children.push(child);
+    }
+  }
+
+  if (children.length <= 1) {
+    return [await renderElementSafe(section, baseScale)];
+  }
+
+  // Split the body's children into roughly equal-sized chunks so that no
+  // single rendered chunk approaches the original (too tall) section size.
+  const totalBodyH = children.reduce((sum, c) => sum + c.getBoundingClientRect().height, 0);
+  const numChunks = Math.max(2, Math.ceil(totalBodyH / SECTION_CHUNK_THRESHOLD));
+  const targetH = totalBodyH / numChunks;
+
+  const chunks = [];
+  let currentChildren = [];
+  let currentH = 0;
+
+  for (const child of children) {
+    const h = child.getBoundingClientRect().height;
+    if (currentChildren.length > 0 && currentH + h > targetH && chunks.length < numChunks - 1) {
+      chunks.push(currentChildren);
+      currentChildren = [];
+      currentH = 0;
+    }
+    currentChildren.push(child);
+    currentH += h;
+  }
+  if (currentChildren.length > 0) chunks.push(currentChildren);
+
+  // Fallback safety: if splitting still produced only one chunk
+  // (e.g. one giant child), render the section as-is.
+  if (chunks.length <= 1) {
+    return [await renderElementSafe(section, baseScale)];
+  }
+
+  window.__pdfChunkCount = chunks.length;
+
+  const canvases = [];
+  for (let i = 0; i < chunks.length; i++) {
+    window.__pdfExportStep = (window.__pdfExportStep || '') + ' [Chunk ' + (i+1) + '/' + chunks.length + ']';
+
+    const wrapper = document.createElement('div');
+    wrapper.className = 'section';
+    wrapper.style.position = 'fixed';
+    wrapper.style.left = '-9999px';
+    wrapper.style.top = '0';
+    wrapper.style.width = section.getBoundingClientRect().width + 'px';
+    wrapper.style.background = '#ffffff';
+
+    const titleClone = titleEl.cloneNode(true);
+    if (i > 0) {
+      const cont = document.createElement('span');
+      cont.style.fontSize = '9px';
+      cont.style.fontWeight = '400';
+      cont.style.marginLeft = '6px';
+      cont.style.textTransform = 'none';
+      cont.style.letterSpacing = 'normal';
+      cont.textContent = '(Fortsetzung)';
+      titleClone.appendChild(cont);
+    }
+    wrapper.appendChild(titleClone);
+
+    const bodyClone = document.createElement('div');
+    bodyClone.className = body.className;
+    bodyClone.setAttribute('style', body.getAttribute('style') || '');
+    chunks[i].forEach(child => bodyClone.appendChild(child.cloneNode(true)));
+    wrapper.appendChild(bodyClone);
+
+    document.body.appendChild(wrapper);
+    try {
+      canvases.push(await renderElementSafe(wrapper, baseScale));
+    } catch (chunkErr) {
+      // Granular fallback: if even this chunk fails, render each of its
+      // top-level children individually so we can isolate the exact element.
+      console.warn('Chunk render failed, falling back to per-element rendering:', chunkErr.message);
+      document.body.removeChild(wrapper);
+
+      for (let j = 0; j < chunks[i].length; j++) {
+        const elWrapper = document.createElement('div');
+        elWrapper.className = 'section';
+        elWrapper.style.position = 'fixed';
+        elWrapper.style.left = '-9999px';
+        elWrapper.style.top = '0';
+        elWrapper.style.width = section.getBoundingClientRect().width + 'px';
+        elWrapper.style.background = '#ffffff';
+
+        if (j === 0) {
+          const tClone = titleEl.cloneNode(true);
+          elWrapper.appendChild(tClone);
+        }
+
+        const elBody = document.createElement('div');
+        elBody.className = body.className;
+        elBody.setAttribute('style', body.getAttribute('style') || '');
+        elBody.appendChild(chunks[i][j].cloneNode(true));
+        elWrapper.appendChild(elBody);
+
+        document.body.appendChild(elWrapper);
+        try {
+          window.__pdfExportStep = (window.__pdfExportStep || '') + ' [Element ' + (j+1) + ': ' + (chunks[i][j].className || chunks[i][j].tagName) + ']';
+          canvases.push(await renderElementSafe(elWrapper, baseScale));
+        } finally {
+          document.body.removeChild(elWrapper);
+        }
+      }
+      continue;
+    }
+    document.body.removeChild(wrapper);
+  }
+
+  return canvases;
+}
+
+// Render Section 4 ("Maße") natively with jsPDF vector text/rects instead of
+// html2canvas (the auto-fill/minmax CSS grid there triggers IndexSizeError
+// on some mobile renderers). Returns the new cursorY position.
+function drawMassSectionNative(pdf, section, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap) {
+  const navy = [0, 27, 67];
+  const orange = [217, 94, 31];
+  const grey = [107, 122, 141];
+  const lightBg = [238, 242, 248];
+  const borderGrey = [210, 218, 227];
+
+  const titleEl = section.querySelector('.section-title');
+  const titleText = titleEl ? titleEl.textContent.replace(/\s+/g, ' ').trim() : 'Maße';
+
+  const groups = Array.from(section.querySelectorAll('.mass-group'));
+  const rowH = 6;       // mm per data row
+  const groupTitleH = 6.5; // mm
+  const groupGapY = 4;  // mm between stacked groups
+  const padX = 3;
+
+  function ensureSpace(h) {
+    if (cursorY + h > bottomLimit) {
+      pdf.addPage();
+      cursorY = margin;
+    }
+  }
+
+  // Section title bar
+  const titleH = 8;
+  ensureSpace(titleH);
+  pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+  pdf.rect(margin, cursorY, contentW, titleH, 'F');
+  pdf.setDrawColor(navy[0], navy[1], navy[2]);
+  pdf.setLineWidth(0.5);
+  pdf.line(margin, cursorY + titleH, margin + contentW, cursorY + titleH);
+  // Number badge
+  pdf.setFillColor(orange[0], orange[1], orange[2]);
+  pdf.circle(margin + 4, cursorY + titleH / 2, 2.2, 'F');
+  pdf.setTextColor(255, 255, 255);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(7);
+  pdf.text('4', margin + 4, cursorY + titleH / 2, { align: 'center', baseline: 'middle' });
+  // Title text
+  pdf.setTextColor(navy[0], navy[1], navy[2]);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(9);
+  pdf.text(titleText.toUpperCase(), margin + 9, cursorY + titleH / 2, { baseline: 'middle' });
+  cursorY += titleH + gap;
+
+  // Lay out groups in two columns
+  const colGap = 4;
+  const colW = (contentW - colGap) / 2;
+
+  for (let i = 0; i < groups.length; i += 2) {
+    const leftGroup = groups[i];
+    const rightGroup = groups[i + 1] || null;
+
+    const leftRows = Array.from(leftGroup.querySelectorAll('.mass-row'));
+    const rightRows = rightGroup ? Array.from(rightGroup.querySelectorAll('.mass-row')) : [];
+    const maxRows = Math.max(leftRows.length, rightRows.length);
+    const blockH = groupTitleH + maxRows * rowH + 2;
+
+    ensureSpace(blockH);
+
+    [{ el: leftGroup, rows: leftRows, x: margin },
+     { el: rightGroup, rows: rightRows, x: margin + colW + colGap }]
+    .forEach(col => {
+      if (!col.el) return;
+      const gTitle = (col.el.querySelector('.mass-group-title') || {}).textContent || '';
+
+      // group border
+      pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+      pdf.setLineWidth(0.2);
+      pdf.rect(col.x, cursorY, colW, blockH, 'S');
+
+      // group title bar
+      pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+      pdf.rect(col.x, cursorY, colW, groupTitleH, 'F');
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(7);
+      pdf.text(gTitle.trim().toUpperCase(), col.x + padX, cursorY + groupTitleH / 2, { baseline: 'middle' });
+
+      // rows
+      col.rows.forEach((row, idx) => {
+        const rowY = cursorY + groupTitleH + idx * rowH;
+        if (idx % 2 === 1) {
+          pdf.setFillColor(248, 250, 251);
+          pdf.rect(col.x, rowY, colW, rowH, 'F');
+        }
+        const label = (row.querySelector('.mass-label') || {}).textContent || '';
+        const unit = (row.querySelector('.mass-unit') || {}).textContent || '';
+        const inputEl = row.querySelector('.mass-input');
+        const val = inputEl && inputEl.value ? inputEl.value : '—';
+
+        pdf.setTextColor(26, 45, 68);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(7.5);
+        pdf.text(label.replace(/\s+/g, ' ').trim(), col.x + padX, rowY + rowH / 2, { baseline: 'middle' });
+
+        pdf.setTextColor(orange[0], orange[1], orange[2]);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(8);
+        pdf.text(String(val), col.x + colW - padX - 8, rowY + rowH / 2, { baseline: 'middle', align: 'right' });
+
+        pdf.setTextColor(grey[0], grey[1], grey[2]);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(6.5);
+        pdf.text(unit.trim(), col.x + colW - padX, rowY + rowH / 2, { baseline: 'middle', align: 'right' });
+
+        // row separator
+        if (idx < col.rows.length - 1) {
+          pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+          pdf.setLineWidth(0.1);
+          pdf.line(col.x, rowY + rowH, col.x + colW, rowY + rowH);
+        }
+      });
+    });
+
+    cursorY += blockH + groupGapY;
+  }
+
+  // ── Bandabstände als Skizze (separater Block, keine .mass-group) ──
+  const bandBlock = section.querySelector('.band-block');
+  if (bandBlock) {
+    const gv = sel => { const el = bandBlock.querySelector(sel); return el && el.value ? el.value : '—'; };
+    const vOb = gv('#mi-band-ob'), vMid = gv('#mi-band-mid'), vUn = gv('#mi-band-un'), vAnz = gv('#mi-band-anz');
+
+    const blockH = 42;
+    ensureSpace(blockH + groupTitleH);
+
+    // Rahmen + Titel
+    pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+    pdf.setLineWidth(0.2);
+    pdf.rect(margin, cursorY, contentW, groupTitleH + blockH, 'S');
+    pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+    pdf.rect(margin, cursorY, contentW, groupTitleH, 'F');
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(7);
+    pdf.text('BANDABSTÄNDE', margin + padX, cursorY + groupTitleH / 2, { baseline: 'middle' });
+
+    const innerTop = cursorY + groupTitleH + 4;
+    // Türskizze links
+    const dx = margin + 8, dw = 20, dTop = innerTop, dh = 30;
+    pdf.setDrawColor(grey[0], grey[1], grey[2]);
+    pdf.setLineWidth(0.5);
+    pdf.rect(dx, dTop, dw, dh, 'S');
+    // Bandseite (dick)
+    pdf.setLineWidth(1.4);
+    pdf.line(dx, dTop, dx, dTop + dh);
+    // OK / UK
+    pdf.setFontSize(6);
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'normal');
+    pdf.text('OK', dx + dw + 1.5, dTop + 1.5);
+    pdf.text('UK', dx + dw + 1.5, dTop + dh);
+    // Bänder
+    pdf.setFillColor(orange[0], orange[1], orange[2]);
+    [0.15, 0.5, 0.82].forEach(f => { pdf.rect(dx - 1.4, dTop + dh * f - 1.6, 2.8, 3.2, 'F'); });
+
+    // Werte rechts
+    const tx = dx + dw + 14;
+    const rows = [
+      ['Oberes Band (von OK)', vOb, 'mm'],
+      ['Mittleres Band', vMid, 'mm'],
+      ['Unteres Band (von UK)', vUn, 'mm'],
+      ['Anzahl Bänder', vAnz, 'Stk.']
+    ];
+    rows.forEach((r, i) => {
+      const ry = innerTop + 2 + i * 7.5;
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(7.5);
+      pdf.setTextColor(26, 45, 68);
+      pdf.text(r[0], tx, ry);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(8);
+      pdf.setTextColor(orange[0], orange[1], orange[2]);
+      pdf.text(String(r[1]), tx + 62, ry, { align: 'right' });
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(6.5);
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.text(r[2], tx + 64, ry);
+    });
+
+    cursorY += groupTitleH + blockH + groupGapY;
+  }
+
+  return cursorY + gap;
+}
+
+// Generic native renderer for sections built from .field-row / .check-group /
+// .divider elements (e.g. Section 5 "Beschläge"). Avoids html2canvas entirely
+// for these sections, since certain combinations of custom radio/checkbox
+// styling and CSS grid (.field-row.double) have been observed to trigger
+// "IndexSizeError" on iOS Safari regardless of canvas size.
+async function drawFieldRowSectionNative(pdf, section, sectionNumber, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap) {
+  const navy = [0, 27, 67];
+  const orange = [217, 94, 31];
+  const grey = [107, 122, 141];
+  const darkText = [26, 45, 68];
+  const lightBg = [238, 242, 248];
+  const borderGrey = [210, 218, 227];
+
+  const titleEl = section.querySelector('.section-title');
+  let titleText = titleEl ? titleEl.textContent.replace(/\s+/g, ' ').trim() : '';
+  // Strip leading number (already drawn separately as a badge)
+  titleText = titleText.replace(/^\d+\s*/, '');
+
+  const padX = 3;
+  const lineH = 5.2; // mm per text line
+
+  function ensureSpace(h) {
+    if (cursorY + h > bottomLimit) {
+      pdf.addPage();
+      cursorY = margin;
+    }
+  }
+
+  // Section title bar
+  const titleH = 8;
+  ensureSpace(titleH);
+  pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+  pdf.rect(margin, cursorY, contentW, titleH, 'F');
+  pdf.setDrawColor(navy[0], navy[1], navy[2]);
+  pdf.setLineWidth(0.5);
+  pdf.line(margin, cursorY + titleH, margin + contentW, cursorY + titleH);
+  pdf.setFillColor(orange[0], orange[1], orange[2]);
+  pdf.circle(margin + 4, cursorY + titleH / 2, 2.2, 'F');
+  pdf.setTextColor(255, 255, 255);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(7);
+  pdf.text(String(sectionNumber), margin + 4, cursorY + titleH / 2, { align: 'center', baseline: 'middle' });
+  pdf.setTextColor(navy[0], navy[1], navy[2]);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(9);
+  pdf.text(titleText.toUpperCase(), margin + 9, cursorY + titleH / 2, { baseline: 'middle' });
+  cursorY += titleH + gap;
+
+  const body = section.querySelector('.section-body');
+  const children = Array.from(body.children);
+
+  for (const child of children) {
+    // Bedingt ausgeblendete Zeilen (z. B. Rohrrahmen-Verbreiterung) nicht drucken
+    if (child.classList && child.classList.contains('cond-hidden')) continue;
+
+    if (child.classList.contains('divider')) {
+      ensureSpace(3);
+      pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+      pdf.setLineWidth(0.2);
+      pdf.line(margin, cursorY + 1.5, margin + contentW, cursorY + 1.5);
+      cursorY += 3;
+      continue;
+    }
+
+    if (!child.classList.contains('field-row')) continue;
+
+    // Rohrrahmen-Verbreiterung: Hinweis + drei Werte (Rechts/Links/Oben)
+    const rrWiden = child.querySelector('.rr-widen');
+    if (rrWiden) {
+      const labelElR = child.querySelector('.field-label');
+      const labelTextR = labelElR ? labelElR.textContent.replace(/\s+/g, ' ').trim() : '';
+      const noteEl = rrWiden.querySelector('.field-note');
+      const noteText = noteEl ? noteEl.textContent.replace(/\s+/g, ' ').trim() : '';
+      const items = Array.from(rrWiden.querySelectorAll('.rr-widen-item')).map(it => {
+        const inp = it.querySelector('input');
+        const lbl = it.childNodes[0] ? it.childNodes[0].textContent.replace(/\s+/g, ' ').trim() : '';
+        const v = inp && inp.value ? inp.value : '0';
+        return lbl + ': ' + v + ' mm';
+      });
+      const rowH = lineH * 3 + 2;
+      ensureSpace(rowH);
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(7);
+      pdf.text(labelTextR.toUpperCase(), margin + padX, cursorY + 3.2);
+      if (noteText) {
+        pdf.setFont('helvetica', 'italic');
+        pdf.setFontSize(6.5);
+        pdf.setTextColor(grey[0], grey[1], grey[2]);
+        const wrappedNote = pdf.splitTextToSize(noteText, contentW - padX * 2);
+        pdf.text(wrappedNote[0] || '', margin + padX, cursorY + 8);
+      }
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(8);
+      pdf.setTextColor(orange[0], orange[1], orange[2]);
+      pdf.text(items.join('     '), margin + padX, cursorY + 13);
+      cursorY += rowH;
+      continue;
+    }
+
+    // Position/Maße row for Lichtausschnitt/Lüftungsgitter contains a
+    // freehand .lg-sketch-wrap canvas instead of a normal value cell.
+    const lgWrap = child.querySelector('.lg-sketch-wrap');
+    if (lgWrap) {
+      const labelEl0 = child.querySelector('.field-label');
+      const labelText0 = labelEl0 ? labelEl0.textContent.replace(/\s+/g, ' ').trim() : '';
+      const canvas = lgWrap.querySelector('canvas');
+      const state = (typeof drawCanvases !== 'undefined' && canvas) ? drawCanvases[canvas.id] : null;
+
+      const boxH = 45; // mm
+      const rowH = lineH + boxH + 2;
+      ensureSpace(rowH);
+
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(7);
+      pdf.text(labelText0.toUpperCase(), margin + padX, cursorY + 3.2);
+
+      const boxY = cursorY + lineH;
+      pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+      pdf.setLineWidth(0.3);
+      pdf.rect(margin, boxY, contentW, boxH, 'S');
+
+      if (state && state.hasInk) {
+        try {
+          const dataUrl = canvas.toDataURL('image/png', 1.0);
+          const imgRatio = canvas.width / canvas.height;
+          const boxRatio = contentW / boxH;
+          let drawW, drawH;
+          if (imgRatio > boxRatio) { drawW = contentW; drawH = contentW / imgRatio; }
+          else { drawH = boxH; drawW = boxH * imgRatio; }
+          const offsetX = margin + (contentW - drawW) / 2;
+          const offsetY = boxY + (boxH - drawH) / 2;
+          pdf.addImage(dataUrl, 'PNG', offsetX, offsetY, drawW, drawH);
+        } catch (e) { /* ignore, leave box empty */ }
+      } else {
+        pdf.setTextColor(grey[0], grey[1], grey[2]);
+        pdf.setFont('helvetica', 'normal');
+        pdf.setFontSize(8);
+        pdf.text('(keine Zeichnung)', margin + contentW / 2, boxY + boxH / 2, { align: 'center', baseline: 'middle' });
+      }
+
+      cursorY += rowH + 2;
+      continue;
+    }
+
+    const isDouble = child.classList.contains('double');
+    const allSpans = Array.from(child.children);
+
+    if (isDouble) {
+      // Two label/value pairs side by side
+      const pairs = [];
+      for (let i = 0; i < allSpans.length; i += 2) {
+        const label = allSpans[i];
+        const valueEl = allSpans[i + 1];
+        if (!label || !valueEl) continue;
+        const labelText = label.textContent.replace(/\s+/g, ' ').trim();
+        const val = (valueEl.tagName === 'INPUT' && valueEl.value) ? valueEl.value : '—';
+        const unit = valueEl.tagName === 'INPUT' ? 'mm' : '';
+        pairs.push({ labelText, val, unit });
+      }
+      const rowH = lineH + 3;
+      ensureSpace(rowH);
+      const halfW = contentW / 2;
+      pairs.forEach((p, idx) => {
+        const x = margin + idx * halfW;
+        pdf.setTextColor(grey[0], grey[1], grey[2]);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(7);
+        pdf.text(p.labelText.toUpperCase(), x + padX, cursorY + 3.2);
+        pdf.setTextColor(orange[0], orange[1], orange[2]);
+        pdf.setFont('helvetica', 'bold');
+        pdf.setFontSize(9);
+        pdf.text(String(p.val) + (p.unit ? ' ' + p.unit : ''), x + padX, cursorY + 8.2);
+      });
+      cursorY += rowH + 2;
+      continue;
+    }
+
+    const labelEl = child.querySelector('.field-label');
+    const labelText = labelEl ? labelEl.textContent.replace(/\s+/g, ' ').trim() : '';
+
+    const checkGroup = child.querySelector('.check-group');
+    const inputEl = child.querySelector('input.field-input, textarea.field-input');
+
+    if (checkGroup) {
+      // Render label, then selected option(s) as text
+      const options = Array.from(checkGroup.querySelectorAll('.check-item'));
+      const selected = options.filter(o => o.querySelector('input').checked)
+                               .map(o => o.textContent.replace(/\s+/g, ' ').trim());
+      const allOptions = options.map(o => o.textContent.replace(/\s+/g, ' ').trim());
+
+      const rowH = lineH * 2 + 2;
+      ensureSpace(rowH);
+
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(7);
+      pdf.text(labelText.toUpperCase(), margin + padX, cursorY + 3.2);
+
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(8);
+      if (selected.length > 0) {
+        pdf.setTextColor(orange[0], orange[1], orange[2]);
+        pdf.setFont('helvetica', 'bold');
+        pdf.text('✓ ' + selected.join(', '), margin + padX, cursorY + 8.4);
+      } else {
+        pdf.setTextColor(180, 175, 168);
+        const optionsLine = allOptions.join('  ·  ');
+        const wrapped = pdf.splitTextToSize(optionsLine, contentW - padX * 2);
+        pdf.text(wrapped[0] || '', margin + padX, cursorY + 8.4);
+      }
+      cursorY += rowH;
+      continue;
+    }
+
+    if (inputEl) {
+      const rowH = lineH * 2 + 2;
+      ensureSpace(rowH);
+      pdf.setTextColor(grey[0], grey[1], grey[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.setFontSize(7);
+      pdf.text(labelText.toUpperCase(), margin + padX, cursorY + 3.2);
+
+      const val = inputEl.value ? inputEl.value : '—';
+      pdf.setFont('helvetica', 'normal');
+      pdf.setFontSize(9);
+      pdf.setTextColor(darkText[0], darkText[1], darkText[2]);
+      pdf.text(String(val), margin + padX, cursorY + 8.4);
+
+      // underline
+      pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+      pdf.setLineWidth(0.2);
+      pdf.line(margin + padX, cursorY + 9.5, margin + contentW - padX, cursorY + 9.5);
+      cursorY += rowH;
+      continue;
+    }
+  }
+
+  return cursorY + gap;
+}
+
+// Render Section 6 ("Skizze & Maßeintragung") natively, bypassing
+// html2canvas entirely. This section's inline <svg> (using
+// stroke="currentColor") and the hidden <input type="file"> have been
+// observed to trigger IndexSizeError in html2canvas on iOS Safari, even
+// after removing the repeating-gradient background and at reduced scale.
+// If the user has drawn/uploaded a sketch image, it is embedded directly
+// from its image source (no DOM screenshot needed). Otherwise a simple
+// placeholder box is drawn.
+async function drawSketchSectionNative(pdf, section, sectionNumber, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap) {
+  const navy = [0, 27, 67];
+  const orange = [217, 94, 31];
+  const grey = [107, 122, 141];
+  const lightBg = [238, 242, 248];
+  const borderGrey = [210, 218, 227];
+
+  const titleEl = section.querySelector('.section-title');
+  let titleText = titleEl ? titleEl.textContent.replace(/\s+/g, ' ').trim() : '';
+  titleText = titleText.replace(/^\d+\s*/, '');
+
+  function ensureSpace(h) {
+    if (cursorY + h > bottomLimit) {
+      pdf.addPage();
+      cursorY = margin;
+    }
+  }
+
+  // Section title bar
+  const titleH = 8;
+  ensureSpace(titleH);
+  pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+  pdf.rect(margin, cursorY, contentW, titleH, 'F');
+  pdf.setDrawColor(navy[0], navy[1], navy[2]);
+  pdf.setLineWidth(0.5);
+  pdf.line(margin, cursorY + titleH, margin + contentW, cursorY + titleH);
+  pdf.setFillColor(orange[0], orange[1], orange[2]);
+  pdf.circle(margin + 4, cursorY + titleH / 2, 2.2, 'F');
+  pdf.setTextColor(255, 255, 255);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(7);
+  pdf.text(String(sectionNumber), margin + 4, cursorY + titleH / 2, { align: 'center', baseline: 'middle' });
+  pdf.setTextColor(navy[0], navy[1], navy[2]);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(9);
+  pdf.text(titleText.toUpperCase(), margin + 9, cursorY + titleH / 2, { baseline: 'middle' });
+  cursorY += titleH + gap;
+
+  const sketchArea = section.querySelector('.sketch-area');
+  const bgImage = sketchArea ? sketchArea.style.backgroundImage : '';
+  const urlMatch = bgImage && bgImage.match(/url\((['"]?)(.*?)\1\)/);
+  const imgSrc = urlMatch ? urlMatch[2] : null;
+
+  // The freehand drawing canvas may contain ink on top of (or instead of)
+  // an uploaded background image. Compose both onto one offscreen canvas
+  // so the export shows exactly what the user sees on screen.
+  const drawState = (typeof drawCanvases !== 'undefined') ? drawCanvases['sketchCanvas'] : null;
+  const hasInk = drawState && drawState.hasInk;
+
+  const boxH = 70; // mm, fixed placeholder/image height
+  ensureSpace(boxH);
+
+  let composedSrc = imgSrc;
+  let composedIsCanvas = false;
+
+  if (hasInk) {
+    try {
+      const inkCanvas = drawState.canvas;
+      const w = inkCanvas.width;
+      const h = inkCanvas.height;
+      const merged = document.createElement('canvas');
+      merged.width = w;
+      merged.height = h;
+      const mctx = merged.getContext('2d');
+      mctx.fillStyle = '#FAFAF8';
+      mctx.fillRect(0, 0, w, h);
+      if (imgSrc) {
+        try {
+          const bg = await new Promise((resolve, reject) => {
+            const img = new Image();
+            img.onload = () => resolve(img);
+            img.onerror = reject;
+            img.src = imgSrc;
+          });
+          // "contain" fit, matching the on-screen background-size: contain
+          const bgRatio = bg.naturalWidth / bg.naturalHeight;
+          const boxRatio = w / h;
+          let dW, dH;
+          if (bgRatio > boxRatio) { dW = w; dH = w / bgRatio; }
+          else { dH = h; dW = h * bgRatio; }
+          mctx.drawImage(bg, (w - dW) / 2, (h - dH) / 2, dW, dH);
+        } catch (e) { /* ignore background load failure, still show ink */ }
+      }
+      mctx.drawImage(inkCanvas, 0, 0, w, h);
+      composedSrc = toDataURLAndFree(merged, 'image/png', 1.0);
+      composedIsCanvas = true;
+    } catch (e) {
+      composedSrc = imgSrc; // fall back to just the uploaded image
+    }
+  }
+
+  if (composedSrc) {
+    // Load the image to get its natural dimensions, then draw it into the box
+    try {
+      const dims = await new Promise((resolve, reject) => {
+        const img = new Image();
+        img.onload = () => resolve({ w: img.naturalWidth, h: img.naturalHeight });
+        img.onerror = reject;
+        img.src = composedSrc;
+      });
+      const boxW = contentW;
+      const imgRatio = dims.w / dims.h;
+      const boxRatio = boxW / boxH;
+      let drawW, drawH;
+      if (imgRatio > boxRatio) {
+        drawW = boxW;
+        drawH = boxW / imgRatio;
+      } else {
+        drawH = boxH;
+        drawW = boxH * imgRatio;
+      }
+      const offsetX = margin + (boxW - drawW) / 2;
+      const offsetY = cursorY + (boxH - drawH) / 2;
+
+      // Border around the full box
+      pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+      pdf.setLineWidth(0.3);
+      pdf.rect(margin, cursorY, boxW, boxH, 'S');
+
+      const fmt = (composedIsCanvas || composedSrc.includes('image/png')) ? 'PNG' : 'JPEG';
+      pdf.addImage(composedSrc, fmt, offsetX, offsetY, drawW, drawH);
+    } catch (e) {
+      // Fall back to placeholder if image couldn't be loaded
+      drawSketchPlaceholder(pdf, margin, cursorY, contentW, boxH, borderGrey, grey);
+    }
+  } else {
+    drawSketchPlaceholder(pdf, margin, cursorY, contentW, boxH, borderGrey, grey);
+  }
+
+  cursorY += boxH + gap;
+  return cursorY;
+}
+
+function drawSketchPlaceholder(pdf, x, y, w, h, borderGrey, grey) {
+  pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+  pdf.setLineWidth(0.3);
+  pdf.setLineDashPattern([1.5, 1.5], 0);
+  pdf.rect(x, y, w, h, 'S');
+  pdf.setLineDashPattern([], 0);
+
+  pdf.setTextColor(grey[0], grey[1], grey[2]);
+  pdf.setFont('helvetica', 'normal');
+  pdf.setFontSize(9);
+  pdf.text('Freihand-Zeichenfläche (keine Skizze hinzugefügt)', x + w / 2, y + h / 2, { align: 'center', baseline: 'middle' });
+}
+
+// Render Section 8 ("Abschluss & Unterschrift") natively. This section
+// contains two live <canvas> signature pads; embedding their bitmaps
+// directly (via toDataURL) avoids relying on html2canvas to snapshot
+// <canvas> elements, which has been unreliable on iOS Safari for the
+// other canvas-heavy sections in this form.
+function drawAbschlussSectionNative(pdf, section, sectionNumber, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap) {
+  const navy = [0, 27, 67];
+  const orange = [217, 94, 31];
+  const grey = [107, 122, 141];
+  const darkText = [26, 45, 68];
+  const lightBg = [238, 242, 248];
+  const borderGrey = [210, 218, 227];
+  const padX = 3;
+  const lineH = 5.2;
+
+  const titleEl = section.querySelector('.section-title');
+  let titleText = titleEl ? titleEl.textContent.replace(/\s+/g, ' ').trim() : '';
+  titleText = titleText.replace(/^\d+\s*/, '');
+
+  function ensureSpace(h) {
+    if (cursorY + h > bottomLimit) {
+      pdf.addPage();
+      cursorY = margin;
+    }
+  }
+
+  // Section title bar
+  const titleH = 8;
+  ensureSpace(titleH);
+  pdf.setFillColor(lightBg[0], lightBg[1], lightBg[2]);
+  pdf.rect(margin, cursorY, contentW, titleH, 'F');
+  pdf.setDrawColor(navy[0], navy[1], navy[2]);
+  pdf.setLineWidth(0.5);
+  pdf.line(margin, cursorY + titleH, margin + contentW, cursorY + titleH);
+  pdf.setFillColor(orange[0], orange[1], orange[2]);
+  pdf.circle(margin + 4, cursorY + titleH / 2, 2.2, 'F');
+  pdf.setTextColor(255, 255, 255);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(7);
+  pdf.text(String(sectionNumber), margin + 4, cursorY + titleH / 2, { align: 'center', baseline: 'middle' });
+  pdf.setTextColor(navy[0], navy[1], navy[2]);
+  pdf.setFont('helvetica', 'bold');
+  pdf.setFontSize(9);
+  pdf.text(titleText.toUpperCase(), margin + 9, cursorY + titleH / 2, { baseline: 'middle' });
+  cursorY += titleH + gap;
+
+  // ── Prüfung (checkboxes) ──
+  const checkRow = section.querySelector('.field-row .check-group');
+  if (checkRow) {
+    const options = Array.from(checkRow.querySelectorAll('.check-item'));
+    const selected = options.filter(o => o.querySelector('input').checked)
+                             .map(o => o.textContent.replace(/\s+/g, ' ').trim());
+    const allOptions = options.map(o => o.textContent.replace(/\s+/g, ' ').trim());
+
+    const rowH = lineH * 2 + 2;
+    ensureSpace(rowH);
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(7);
+    pdf.text('PRÜFUNG', margin + padX, cursorY + 3.2);
+
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(8);
+    if (selected.length > 0) {
+      pdf.setTextColor(orange[0], orange[1], orange[2]);
+      pdf.setFont('helvetica', 'bold');
+      pdf.text('✓ ' + selected.join(', '), margin + padX, cursorY + 8.4);
+    } else {
+      pdf.setTextColor(180, 175, 168);
+      const optionsLine = allOptions.join('  ·  ');
+      const wrapped = pdf.splitTextToSize(optionsLine, contentW - padX * 2);
+      pdf.text(wrapped[0] || '', margin + padX, cursorY + 8.4);
+    }
+    cursorY += rowH;
+  }
+
+  // ── Bemerkungen (textarea) ──
+  const textarea = section.querySelector('textarea.field-input');
+  if (textarea) {
+    const val = textarea.value ? textarea.value.trim() : '';
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(7);
+    ensureSpace(lineH);
+    pdf.text('BEMERKUNGEN', margin + padX, cursorY + 3.2);
+    cursorY += lineH;
+
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(9);
+    pdf.setTextColor(darkText[0], darkText[1], darkText[2]);
+    const text = val || '—';
+    const wrapped = pdf.splitTextToSize(text, contentW - padX * 2);
+    const textH = wrapped.length * lineH;
+    ensureSpace(textH + 2);
+    pdf.text(wrapped, margin + padX, cursorY + 3.2);
+    cursorY += textH + 2;
+
+    // box around remarks
+    pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+    pdf.setLineWidth(0.2);
+  }
+
+  cursorY += gap;
+
+  // ── Unterschriften (signature canvases) ──
+  const signBoxes = Array.from(section.querySelectorAll('.sign-box'));
+  const boxH = 35; // mm height per signature box
+  ensureSpace(boxH);
+  const colW = (contentW - 6) / 2; // 6mm gap between the two boxes
+
+  signBoxes.forEach((box, idx) => {
+    const x = margin + idx * (colW + 6);
+    const labelEl = box.querySelector('label');
+    const labelText = labelEl ? labelEl.textContent.replace(/\s+/g, ' ').trim() : '';
+
+    // Box border
+    pdf.setDrawColor(borderGrey[0], borderGrey[1], borderGrey[2]);
+    pdf.setLineWidth(0.3);
+    pdf.rect(x, cursorY, colW, boxH, 'S');
+
+    // Label
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'bold');
+    pdf.setFontSize(7);
+    pdf.text(labelText.toUpperCase(), x + padX, cursorY + 4.5);
+
+    // Signature image (if drawn)
+    const canvas = box.querySelector('canvas.sign-canvas');
+    const state = (typeof drawCanvases !== 'undefined' && canvas) ? drawCanvases[canvas.id] : null;
+    const sigAreaY = cursorY + 6;
+    const sigAreaH = boxH - 6 - 5; // leave room for "Name, Unterschrift, Datum" line
+    if (state && state.hasInk) {
+      try {
+        const dataUrl = canvas.toDataURL('image/png', 1.0);
+        const imgRatio = canvas.width / canvas.height;
+        const boxRatio = (colW - padX * 2) / sigAreaH;
+        let drawW, drawH;
+        if (imgRatio > boxRatio) {
+          drawW = colW - padX * 2;
+          drawH = drawW / imgRatio;
+        } else {
+          drawH = sigAreaH;
+          drawW = drawH * imgRatio;
+        }
+        const offsetX = x + padX;
+        const offsetY = sigAreaY + (sigAreaH - drawH) / 2;
+        pdf.addImage(dataUrl, 'PNG', offsetX, offsetY, drawW, drawH);
+      } catch (e) { /* ignore, leave blank */ }
+    }
+
+    // "Name, Unterschrift, Datum" line
+    pdf.setDrawColor(borderGrey[0] + 20 < 255 ? borderGrey[0] : 255, borderGrey[1], borderGrey[2]);
+    pdf.setLineWidth(0.2);
+    pdf.line(x + padX, cursorY + boxH - 6, x + colW - padX, cursorY + boxH - 6);
+    pdf.setTextColor(grey[0], grey[1], grey[2]);
+    pdf.setFont('helvetica', 'normal');
+    pdf.setFontSize(7);
+    pdf.text('Name, Unterschrift, Datum', x + padX, cursorY + boxH - 2.5);
+  });
+
+  cursorY += boxH + gap;
+  return cursorY;
+}
+
+async function exportPDF(mode = 'save') {
+  const overlay = document.getElementById('export-overlay');
+  overlay.classList.add('active');
+
+  // Hide action buttons during capture
+  document.querySelector('.actions').style.display = 'none';
+
+  // Simplify CSS grid layouts that html2canvas struggles with
+  // (e.g. repeat(auto-fill, minmax(...)) can trigger IndexSizeError)
+  document.body.classList.add('pdf-export-mode');
+
+  // Eingeklappte Akkordeon-Sections haben display:none und würden bei der
+  // Höhenmessung (getBoundingClientRect) als 0px erfasst -> im PDF fehlen.
+  // Vor dem Export daher alle Sections ausklappen, danach Zustand wiederherstellen.
+  const __collapsedSectionsForExport = expandAllSectionsForExport();
+
+  // The .sketch-area uses two overlapping repeating-linear-gradient()
+  // layers (24px graph-paper pattern) as its background. Small-tile CSS
+  // gradient patterns have been observed to trigger IndexSizeError in
+  // html2canvas on iOS Safari. Temporarily override with a plain
+  // background via inline style (higher specificity than the class rule,
+  // no !important needed, so a user-added sketch image - also set via
+  // inline style - is preserved/restored correctly).
+  const sketchArea = document.getElementById('sketchArea');
+  let sketchAreaPrevStyle = null;
+  if (sketchArea) {
+    // Save all background-related inline styles (the shorthand 'background'
+    // assignment below would otherwise wipe out a user-uploaded sketch
+    // image, which is set via backgroundImage/backgroundSize/etc.)
+    sketchAreaPrevStyle = {
+      background: sketchArea.style.background || '',
+      backgroundImage: sketchArea.style.backgroundImage || '',
+      backgroundSize: sketchArea.style.backgroundSize || '',
+      backgroundRepeat: sketchArea.style.backgroundRepeat || '',
+      backgroundPosition: sketchArea.style.backgroundPosition || ''
+    };
+    // Replace with a plain background (drops the repeating-linear-gradient
+    // graph-paper pattern from the CSS class). Setting the 'background'
+    // shorthand also clears backgroundImage, so re-apply the user's sketch
+    // image (if any) afterwards - only the gradient pattern is removed.
+    sketchArea.style.background = '#FAFAF8';
+    if (sketchAreaPrevStyle.backgroundImage) {
+      sketchArea.style.backgroundImage = sketchAreaPrevStyle.backgroundImage;
+      sketchArea.style.backgroundSize = sketchAreaPrevStyle.backgroundSize;
+      sketchArea.style.backgroundRepeat = sketchAreaPrevStyle.backgroundRepeat;
+      sketchArea.style.backgroundPosition = sketchAreaPrevStyle.backgroundPosition;
+    }
+  }
+
+  // Small delay so overlay paints and layout reflows before heavy capture work
+  await new Promise(r => setTimeout(r, 100));
+
+  try {
+    window.__pdfExportStep = 'Initialisierung';
+    const header = document.querySelector('.doc-header');
+    const sections = Array.from(document.querySelectorAll('#main-form .section'));
+    const footerEl = document.querySelector('.doc-footer');
+
+    const { jsPDF } = window.jspdf;
+    const pdf = new jsPDF({ orientation: 'portrait', unit: 'mm', format: 'a4' });
+
+    const pageW = 210;
+    const pageH = 297;
+    const margin = 10;
+    const contentW = pageW - margin * 2;
+    const gap = 3; // mm between blocks
+
+    // Render header first (always on page 1)
+    window.__pdfExportStep = 'Header rendern';
+    const canvasHeader = await renderElementSafe(header, 2);
+    const headerH = Math.min((canvasHeader.height / canvasHeader.width) * contentW, 30);
+    pdf.addImage(toDataURLAndFree(canvasHeader, 'image/jpeg', 0.95), 'JPEG', margin, margin, contentW, headerH);
+
+    let cursorY = margin + headerH + gap;
+    const bottomLimit = pageH - margin;
+
+    // Places a single rendered canvas block into the PDF, handling page
+    // breaks and slicing if the block itself is taller than one page.
+    // Frees the canvas's backing memory once it is no longer needed.
+    function placeCanvasBlock(canvas) {
+      const blockH = (canvas.height / canvas.width) * contentW;
+
+      if (blockH <= (bottomLimit - cursorY)) {
+        pdf.addImage(toDataURLAndFree(canvas, 'image/jpeg', 0.92), 'JPEG', margin, cursorY, contentW, blockH);
+        cursorY += blockH + gap;
+      } else if (blockH <= (pageH - margin * 2)) {
+        pdf.addPage();
+        cursorY = margin;
+        pdf.addImage(toDataURLAndFree(canvas, 'image/jpeg', 0.92), 'JPEG', margin, cursorY, contentW, blockH);
+        cursorY += blockH + gap;
+      } else {
+        // Block itself is taller than one page: slice across multiple pages.
+        const pxPerMm = canvas.width / contentW;
+        const totalH = canvas.height;
+        let yPx = 0;
+        let firstSlice = true;
+        let safety = 0;
+        while (yPx < totalH && safety < 50) {
+          safety++;
+          const availMm = firstSlice ? (bottomLimit - cursorY) : (pageH - margin * 2);
+          const maxSlicePx = Math.floor(availMm * pxPerMm);
+          const remainingPx = Math.floor(totalH - yPx);
+          const sliceHpx = Math.max(1, Math.min(maxSlicePx, remainingPx));
+          if (sliceHpx <= 0 || remainingPx <= 0) break;
+
+          const sliceCanvas = document.createElement('canvas');
+          sliceCanvas.width = canvas.width;
+          sliceCanvas.height = sliceHpx;
+          const ctx = sliceCanvas.getContext('2d');
+          ctx.fillStyle = '#ffffff';
+          ctx.fillRect(0, 0, sliceCanvas.width, sliceCanvas.height);
+          ctx.drawImage(canvas, 0, -yPx);
+          const sliceData = toDataURLAndFree(sliceCanvas, 'image/jpeg', 0.92);
+          const sliceHmm = sliceHpx / pxPerMm;
+
+          if (!firstSlice) { pdf.addPage(); cursorY = margin; }
+          pdf.addImage(sliceData, 'JPEG', margin, cursorY, contentW, sliceHmm);
+          cursorY += sliceHmm;
+          yPx += sliceHpx;
+          firstSlice = false;
+        }
+        cursorY += gap;
+        // Free the original (large) canvas after all slices are done
+        canvas.width = 0;
+        canvas.height = 0;
+      }
+    }
+
+    // Render each section individually and flow them across pages.
+    // This avoids ever creating one giant canvas (iOS canvas size limit).
+    for (const section of sections) {
+      window.__pdfExportStep = 'Sektion rendern (' + (section.querySelector('.section-title') ? section.querySelector('.section-title').textContent.trim() : '?') + ')';
+
+      // Section 4 ("Maße") uses an auto-fill/minmax CSS grid that html2canvas
+      // cannot reliably rasterize on some mobile renderers (IndexSizeError).
+      // Render this section natively as a vector table instead of a screenshot.
+      if (section.querySelector('.mass-grid')) {
+        cursorY = drawMassSectionNative(pdf, section, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap);
+        continue;
+      }
+
+      const sectionNumEl = section.querySelector('.section-title .num');
+      const sectionNum = sectionNumEl ? sectionNumEl.textContent.trim() : '';
+
+      // Section 2 ("Türart & Nutzung") now contains a live <canvas> for
+      // sketching the Lichtausschnitt/Lüftungsgitter position. As with the
+      // other canvas-containing sections, snapshot it natively rather than
+      // relying on html2canvas to capture the <canvas> bitmap on iOS Safari.
+      if (sectionNum === '2') {
+        cursorY = await drawFieldRowSectionNative(pdf, section, sectionNum, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap);
+        continue;
+      }
+
+      // Section 5 ("Beschläge") combines many .check-group radio sets with a
+      // .field-row.double grid; this specific combination has been observed
+      // to trigger IndexSizeError in html2canvas on iOS Safari regardless of
+      // canvas size. Render it natively as vector text instead.
+      if (sectionNum === '5') {
+        cursorY = await drawFieldRowSectionNative(pdf, section, sectionNum, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap);
+        continue;
+      }
+
+      // Section 6 ("Skizze & Maßeintragung") contains an inline <svg> with
+      // stroke="currentColor" and a hidden <input type="file">, both of
+      // which have been observed to trigger IndexSizeError in html2canvas
+      // on iOS Safari even after removing the gradient background and at
+      // reduced scale. Render it natively instead (embeds the user's sketch
+      // image directly if present, or draws a placeholder box).
+      if (sectionNum === '6') {
+        cursorY = await drawSketchSectionNative(pdf, section, sectionNum, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap);
+        continue;
+      }
+
+      // Section 8 ("Abschluss & Unterschrift") contains two live <canvas>
+      // signature pads. Snapshotting <canvas> bitmaps via html2canvas has
+      // been unreliable on iOS Safari for other canvas-heavy sections in
+      // this form, so render this section natively, embedding each
+      // signature canvas's bitmap directly via toDataURL.
+      if (sectionNum === '8') {
+        cursorY = drawAbschlussSectionNative(pdf, section, sectionNum, pageW, pageH, margin, contentW, cursorY, bottomLimit, gap);
+        continue;
+      }
+
+      // Long sections are split into smaller chunks before rendering, since
+      // very tall canvases can trigger IndexSizeError on some mobile
+      // renderers even when within the per-side MAX_DIM limit.
+      // If rendering still fails (e.g. due to accumulated iOS canvas memory
+      // pressure from earlier sections), retry once at a lower resolution,
+      // which uses a quarter of the pixel memory.
+      let canvasChunks;
+      try {
+        canvasChunks = await renderSectionChunks(section, 2);
+      } catch (renderErr) {
+        console.warn('Section render failed at scale 2, retrying at scale 1:', renderErr.message);
+        await new Promise(r => setTimeout(r, 100));
+        canvasChunks = await renderSectionChunks(section, 1);
+      }
+      for (const canvas of canvasChunks) {
+        placeCanvasBlock(canvas);
+      }
+
+      // Brief pause between sections to allow iOS Safari to reclaim canvas
+      // memory from the previous html2canvas call before the next one.
+      // Repeated html2canvas calls without this can accumulate memory
+      // pressure and trigger IndexSizeError on a later, unrelated section.
+      await new Promise(r => setTimeout(r, 30));
+
+      // Start a new page if we're essentially at the bottom
+      if (cursorY > bottomLimit - 5 && section !== sections[sections.length - 1]) {
+        pdf.addPage();
+        cursorY = margin;
+      }
+    }
+
+    // ── WATERMARK + FOOTER on every page ──
+    window.__pdfExportStep = 'Wasserzeichen erstellen';
+    const watermarkTile = buildWatermarkTile();
+    const totalPages = pdf.internal.getNumberOfPages();
+    window.__pdfExportStep = 'Wasserzeichen einfügen';
+    for (let p = 1; p <= totalPages; p++) {
+      pdf.setPage(p);
+      drawWatermarkAndFooter(pdf, pageW, pageH, margin, watermarkTile, p, totalPages);
+    }
+
+    // Generate filename
+    const projektEl = document.getElementById('field-projekt');
+    const projekt = (projektEl && projektEl.value.trim().replace(/[^a-zA-Z0-9äöüÄÖÜß\-_]/g, '_').substring(0, 30)) || 'Aufmass';
+    const dateFile = new Date().toISOString().slice(0,10);
+    const filename = `Tuerblatt_${projekt}_${dateFile}.pdf`;
+
+    if (mode === 'email') {
+      window.__pdfExportStep = 'Freigabedialog öffnen';
+      const pdfBlob = pdf.output('blob');
+      const pdfFile = new File([pdfBlob], filename, { type: 'application/pdf' });
+      let shared = false;
+      if (navigator.canShare && navigator.canShare({ files: [pdfFile] })) {
+        try {
+          await navigator.share({
+            files: [pdfFile],
+            title: 'Türblatt Aufmaß',
+            text: `Aufmaßprotokoll ${projekt}`
+          });
+          shared = true;
+        } catch (shareErr) {
+          // User cancelled the share sheet, or share failed — fall back below.
+          if (shareErr && shareErr.name === 'AbortError') {
+            shared = true; // user deliberately cancelled; don't force a download
+          }
+        }
+      }
+      if (!shared) {
+        window.__pdfExportStep = 'PDF speichern (Fallback)';
+        pdf.save(filename);
+        alert('Dieses Gerät/Browser unterstützt kein direktes Teilen. Das PDF wurde stattdessen heruntergeladen – bitte manuell als Anhang an die E-Mail anfügen.');
+      }
+    } else {
+      window.__pdfExportStep = 'PDF speichern';
+      pdf.save(filename);
+    }
+
+  } catch(e) {
+    const step = window.__pdfExportStep || 'unbekannt';
+    alert('PDF-Export fehlgeschlagen (' + step + '): ' + (e && e.message ? e.message : e));
+    console.error('PDF export error at step:', step, e);
+  } finally {
+    document.body.classList.remove('pdf-export-mode');
+    restoreSectionAccordionState(__collapsedSectionsForExport);
+    // Restore the sketch-area's original background (graph-paper gradient
+    // and/or user sketch image)
+    if (sketchArea && sketchAreaPrevStyle) {
+      // Clear the shorthand first (removeProperty('background') also wipes
+      // any longhand background-* properties), then re-apply the saved
+      // longhands so order doesn't matter.
+      sketchArea.style.removeProperty('background');
+      sketchArea.style.removeProperty('background-image');
+      sketchArea.style.removeProperty('background-size');
+      sketchArea.style.removeProperty('background-repeat');
+      sketchArea.style.removeProperty('background-position');
+      sketchArea.style.removeProperty('background-color');
+
+      if (sketchAreaPrevStyle.background) {
+        sketchArea.style.background = sketchAreaPrevStyle.background;
+      }
+      if (sketchAreaPrevStyle.backgroundImage) {
+        sketchArea.style.backgroundImage = sketchAreaPrevStyle.backgroundImage;
+      }
+      if (sketchAreaPrevStyle.backgroundSize) {
+        sketchArea.style.backgroundSize = sketchAreaPrevStyle.backgroundSize;
+      }
+      if (sketchAreaPrevStyle.backgroundRepeat) {
+        sketchArea.style.backgroundRepeat = sketchAreaPrevStyle.backgroundRepeat;
+      }
+      if (sketchAreaPrevStyle.backgroundPosition) {
+        sketchArea.style.backgroundPosition = sketchAreaPrevStyle.backgroundPosition;
+      }
+    }
+    document.querySelector('.actions').style.display = 'flex';
+    overlay.classList.remove('active');
+  }
+}
+
+// ── BAUGLEICHE TÜREN (MEHRFACH-TÜR) ───────────────────
+function toggleMultiDoor() {
+  const on = document.getElementById('multidoor-toggle').checked;
+  const block = document.getElementById('multidoor-block');
+  block.style.display = on ? 'block' : 'none';
+  if (on && !document.getElementById('multidoor-list').children.length) {
+    addMultiDoorRow();
+  }
+}
+
+function addMultiDoorRow() {
+  const list = document.getElementById('multidoor-list');
+  const row = document.createElement('div');
+  row.className = 'multidoor-row';
+  row.innerHTML =
+    '<input class="field-input" type="text" placeholder="Etage / Bereich">' +
+    '<input class="field-input" type="text" placeholder="Raumbezeichnung">' +
+    '<button type="button" class="multidoor-del" onclick="this.parentElement.remove()">✕</button>';
+  list.appendChild(row);
+}
+
+// ── RESET ─────────────────────────────────────────────
+function resetForm() {
+  if (!confirm('Alle Eingaben zurücksetzen?')) return;
+  // Remove all extra door panels
+  while (doorPanels.length > 1) {
+    doorPanels[doorPanels.length - 1].remove();
+    doorPanels.pop();
+  }
+  activeDoorIndex = 0;
+  updateDoorTabs();
+  switchDoor(0);
+
+  document.querySelectorAll('input[type="text"], input[type="number"], textarea').forEach(el => el.value = '');
+  document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach(el => el.checked = false);
+  document.querySelectorAll('.foto-slot img').forEach(img => img.remove());
+  document.querySelectorAll('.foto-slot .icon, .foto-slot label').forEach(el => el.style.display = '');
+  initSectionAccordion();
+  document.getElementById('din-l').classList.remove('selected');
+  document.getElementById('din-r').classList.remove('selected');
+  // Reset door animations
+  ['svg-din-l','svg-din-r'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) {
+      el.style.transform = '';
+      el.style.transformOrigin = '';
+      el.dataset.prog = '0';
+    }
+  });
+  const area = document.getElementById('sketchArea');
+  area.style.backgroundImage = '';
+  area.querySelector('.sketch-hint').style.display = '';
+  document.getElementById('gps-status').textContent = '';
+  document.getElementById('multidoor-list').innerHTML = '';
+  document.getElementById('multidoor-block').style.display = 'none';
+  const d = new Date();
+  document.getElementById('field-datum').value =
+    d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  if (verifiedEmployeeCode && EMPLOYEE_CODES[verifiedEmployeeCode]) {
+    document.getElementById('field-aufgenommen').value = EMPLOYEE_CODES[verifiedEmployeeCode];
+  }
+  localStorage.removeItem(AUTOSAVE_KEY);
+  localStorage.removeItem(AUTOSAVE_META_KEY);
+  updateFilenamePreview();
+}
+
+// ── PAYMENT GATE ─────────────────────────────────────
+// (ADMIN_CODE, EMPLOYEE_CODES_KEY, DEFAULT_EMPLOYEE_CODES, loadEmployeeCodes,
+//  saveEmployeeCodes, EMPLOYEE_CODES, PAYPAL_ME, paypalClicked,
+//  pendingExportMode, verifiedEmployeeCode – all declared at top of script)
+
+
+  // Shared validation: checks a code, and if valid, remembers it and
+  // fills the "Aufgenommen von" field with the matching name.
+  function applyEmployeeCode(code) {
+    const name = EMPLOYEE_CODES[code];
+    if (!name) return false;
+    verifiedEmployeeCode = code;
+    localStorage.setItem('lastEmployeeCode', code);
+    const aufgenommenField = document.getElementById('field-aufgenommen');
+    if (aufgenommenField) aufgenommenField.value = name;
+    return true;
+  }
+
+  // ── CODE-ABFRAGE GANZ AM ANFANG DES DOKUMENTS ────────
+  function checkStartCode() {
+    const inp = document.getElementById('code-input-start');
+    const val = inp.value.trim();
+    const msg = document.getElementById('code-msg-start');
+
+    // Admin code: open admin panel instead of normal login
+    if (val === ADMIN_CODE) {
+      document.getElementById('code-gate').classList.remove('active');
+      inp.value = '';
+      openAdmin();
+      return;
+    }
+
+    if (applyEmployeeCode(val)) {
+      msg.textContent = '✓ Code akzeptiert – ' + EMPLOYEE_CODES[val];
+      msg.className = 'ok';
+      setTimeout(() => { document.getElementById('code-gate').classList.remove('active'); }, 700);
+    } else {
+      msg.textContent = '✗ Ungültiger Code.';
+      msg.className = 'err';
+      inp.value = '';
+      inp.focus();
+    }
+  }
+
+  function skipStartCode() {
+    document.getElementById('code-gate').classList.remove('active');
+  }
+
+  function checkPayment(mode) {
+    pendingExportMode = mode || 'save';
+    // A code was already verified at the start of the document –
+    // no need to ask again, just export directly.
+    if (verifiedEmployeeCode && EMPLOYEE_CODES[verifiedEmployeeCode]) {
+      exportPDF(pendingExportMode);
+      return;
+    }
+    paypalClicked = false;
+    // Pre-fill the code field with the last successfully used code,
+    // so the technician doesn't have to retype it every export.
+    document.getElementById('code-input').value = localStorage.getItem('lastEmployeeCode') || '';
+    document.getElementById('code-msg').textContent = '';
+    document.getElementById('pay-gate').classList.add('active');
+  }
+
+  function closePayGate() {
+    document.getElementById('pay-gate').classList.remove('active');
+    paypalClicked = false;
+  }
+
+  function onPaypalClick() {
+    paypalClicked = true;
+    document.getElementById('paypal-btn').href = PAYPAL_ME;
+    // Poll: after user returns, show confirm button
+    setTimeout(() => {
+      const msg = document.getElementById('code-msg');
+      msg.className = '';
+      msg.innerHTML = '<br>Zahlung abgeschlossen? <button onclick="confirmPaypal()" style="background:var(--orange);color:#fff;border:none;border-radius:6px;padding:6px 14px;font-weight:700;cursor:pointer;font-size:12px;">Ja, PDF erstellen ✓</button>';
+    }, 4000);
+  }
+
+  function confirmPaypal() {
+    closePayGate();
+    exportPDF(pendingExportMode);
+  }
+
+  function checkCode() {
+    const val = document.getElementById('code-input').value.trim();
+    const msg = document.getElementById('code-msg');
+    if (applyEmployeeCode(val)) {
+      msg.textContent = '✓ Code akzeptiert – PDF wird erstellt …';
+      msg.className = 'ok';
+      setTimeout(() => { closePayGate(); exportPDF(pendingExportMode); }, 800);
+    } else {
+      msg.textContent = '✗ Ungültiger Code.';
+      msg.className = 'err';
+      document.getElementById('code-input').value = '';
+      document.getElementById('code-input').focus();
+    }
+  }
+
+  // Allow Enter key in both code inputs; show the start gate on load.
+  document.addEventListener('DOMContentLoaded', () => {
+    const inp = document.getElementById('code-input');
+    if (inp) inp.addEventListener('keydown', e => { if (e.key === 'Enter') checkCode(); });
+
+    const startInp = document.getElementById('code-input-start');
+    if (startInp) {
+      const saved = localStorage.getItem('lastEmployeeCode');
+      if (saved) startInp.value = saved;
+      startInp.addEventListener('keydown', e => { if (e.key === 'Enter') checkStartCode(); });
+    }
+    const startGate = document.getElementById('code-gate');
+    if (startGate) startGate.classList.add('active');
+
+    // Init multi-door tabs
+    buildDoorTabsUI();
+    updateDoorTabs();
+
+    // Init Akkordeon (nur Section 1 offen, Rest eingeklappt)
+    initSectionAccordion();
+
+    // Init autosave
+    attachAutosaveListeners();
+    // Check for autosave after a delay (lets the code gate appear first)
+    setTimeout(checkForAutosave, 2000);
+
+    // Init filename preview
+    updateFilenamePreview();
+    document.getElementById('field-projekt')?.addEventListener('input', updateFilenamePreview);
+
+    // Set footer date and today's date
+    const d = new Date();
+    const el = document.getElementById('footer-date');
+    if (el) el.textContent = d.toLocaleDateString('de-DE');
+    const datumEl = document.getElementById('field-datum');
+    if (datumEl && !datumEl.value) {
+      datumEl.value = d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+    }
+
+    // Populate obfuscated references
+    const creditEl = document.getElementById('footer-credit');
+    if (creditEl) creditEl.textContent = atob('Q3JlYXRlZCBieSBNLkcu');
+    const adminBadge = document.getElementById('admin-code-display');
+    if (adminBadge) adminBadge.textContent = ADMIN_CODE;
+  });
+
+
+// ── AUTOSAVE (LocalStorage) ───────────────────────────
+// (AUTOSAVE_KEY, AUTOSAVE_META_KEY, autosaveTimer, pendingRestore declared at top)
+
+function collectFormData() {
+  const data = {};
+  try {
+    document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"], textarea').forEach((el, i) => {
+      const key = (el.id || el.name || '') + '_' + i;
+      data[key] = el.value;
+    });
+    document.querySelectorAll('input[type="checkbox"], input[type="radio"]').forEach((el, i) => {
+      const key = (el.id || el.name || '') + '_chk_' + i;
+      data[key] = el.checked;
+    });
+    data['__activeDoorTab'] = typeof activeDoorIndex !== 'undefined' ? activeDoorIndex : 0;
+  } catch(e) {}
+  return data;
+}
+
+function triggerAutosave() {
+  if (autosaveTimer) clearTimeout(autosaveTimer);
+  autosaveTimer = setTimeout(() => {
+    try {
+      const data = collectFormData();
+      localStorage.setItem(AUTOSAVE_KEY, JSON.stringify(data));
+      const meta = { ts: Date.now(), doorCount: doorPanels.length };
+      localStorage.setItem(AUTOSAVE_META_KEY, JSON.stringify(meta));
+      flashAutosaveIndicator();
+    } catch(e) { /* storage full or unavailable */ }
+  }, 3000);
+}
+
+function flashAutosaveIndicator() {
+  const el = document.getElementById('autosave-indicator');
+  if (!el) return;
+  el.classList.add('flash');
+  setTimeout(() => el.classList.remove('flash'), 1800);
+}
+
+function checkForAutosave() {
+  try {
+    const raw = localStorage.getItem(AUTOSAVE_KEY);
+    const metaRaw = localStorage.getItem(AUTOSAVE_META_KEY);
+    if (!raw) return;
+    const meta = metaRaw ? JSON.parse(metaRaw) : {};
+    const ageMin = meta.ts ? Math.round((Date.now() - meta.ts) / 60000) : null;
+    const banner = document.getElementById('autosave-banner');
+    const msg = document.getElementById('autosave-banner-msg');
+    if (ageMin !== null) {
+      msg.textContent = ageMin < 60
+        ? `💾 Nicht gespeicherte Eingaben von vor ${ageMin} Minuten gefunden`
+        : `💾 Nicht gespeicherte Eingaben gefunden – zum Wiederherstellen klicken`;
+    }
+    pendingRestore = raw;
+    banner.classList.add('visible', 'restore');
+  } catch(e) {}
+}
+
+function restoreAutosave() {
+  if (!pendingRestore) return;
+  try {
+    const data = JSON.parse(pendingRestore);
+    const inputs = document.querySelectorAll('input[type="text"], input[type="number"], input[type="date"], textarea');
+    const checks = document.querySelectorAll('input[type="checkbox"], input[type="radio"]');
+    inputs.forEach((el, i) => {
+      const key = (el.id || el.name || '') + '_' + i;
+      if (data[key] !== undefined) el.value = data[key];
+    });
+    checks.forEach((el, i) => {
+      const key = (el.id || el.name || '') + '_chk_' + i;
+      if (data[key] !== undefined) el.checked = data[key];
+    });
+  } catch(e) {}
+  dismissAutosave();
+  updateFilenamePreview();
+}
+
+function dismissAutosave() {
+  const banner = document.getElementById('autosave-banner');
+  banner.classList.remove('visible', 'restore');
+  pendingRestore = null;
+  localStorage.removeItem(AUTOSAVE_KEY);
+  localStorage.removeItem(AUTOSAVE_META_KEY);
+}
+
+// Attach autosave listener to all inputs
+function attachAutosaveListeners() {
+  document.addEventListener('input', () => triggerAutosave());
+  document.addEventListener('change', () => triggerAutosave());
+}
+
+// ── SECTION-AKKORDEON (geführter Ablauf mit Auto-Weiterschaltung) ──
+// Jede .section wird per Klick auf den Header manuell ein-/ausgeklappt.
+// Der "Weiter"-Button schließt die aktuelle Section automatisch und
+// öffnet die nächste (nur innerhalb desselben Tür-Panels, falls mehrere
+// Türen über die Tabs angelegt wurden).
+
+function initSectionAccordion() {
+  // Pro Formular-Panel (main-form + evtl. geklonte Tür-Panels): nur die
+  // erste Section offen, alle weiteren eingeklappt.
+  document.querySelectorAll('.form-wrapper').forEach(panel => {
+    const sections = Array.from(panel.children).filter(el => el.classList && el.classList.contains('section'));
+    sections.forEach((section, i) => {
+      section.classList.toggle('collapsed', i !== 0);
+      section.classList.remove('section-done');
+    });
+  });
+}
+
+function toggleSection(titleEl) {
+  const section = titleEl.closest('.section');
+  if (!section) return;
+  const willOpen = section.classList.contains('collapsed');
+  if (willOpen) {
+    openSection(section);
+  } else {
+    section.classList.add('collapsed');
+  }
+}
+
+function openSection(section) {
+  // Alle anderen Sections im selben Panel schließen (Single-Open-Akkordeon)
+  const panel = section.closest('.form-wrapper');
+  if (panel) {
+    Array.from(panel.children).forEach(el => {
+      if (el.classList && el.classList.contains('section') && el !== section) {
+        el.classList.add('collapsed');
+      }
+    });
+  }
+  section.classList.remove('collapsed');
+  section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function nextSection(btnEl) {
+  const current = btnEl.closest('.section');
+  if (!current) return;
+  current.classList.add('section-done');
+  // Nächste .section innerhalb desselben Panels finden (überspringt
+  // Kommentare/Footer/etc., die kein .section-Element sind)
+  let next = current.nextElementSibling;
+  while (next && !(next.classList && next.classList.contains('section'))) {
+    next = next.nextElementSibling;
+  }
+  if (next) {
+    openSection(next);
+  } else {
+    current.classList.add('collapsed');
+  }
+}
+
+// Vor dem PDF-Export müssen alle Sections sichtbar sein, da der Export
+// die tatsächliche gerenderte Höhe (getBoundingClientRect) jeder Section
+// zur Paginierung ausliest. Eingeklappte (display:none) Sections würden
+// dort als 0px hoch gemessen und im PDF fehlen.
+function expandAllSectionsForExport() {
+  const collapsedSections = Array.from(document.querySelectorAll('.section.collapsed'));
+  collapsedSections.forEach(s => s.classList.remove('collapsed'));
+  return collapsedSections;
+}
+
+function restoreSectionAccordionState(collapsedSections) {
+  (collapsedSections || []).forEach(s => s.classList.add('collapsed'));
+}
+
+
+
+function buildDoorTabsUI() {
+  // Just register the existing main-form as panel 0 - don't modify it to avoid breaking canvas init
+  const mainForm = document.getElementById('main-form');
+  if (!mainForm) return;
+  mainForm.classList.add('door-panel', 'active');
+  mainForm.setAttribute('data-door-index', '0');
+  doorPanels = [mainForm];
+}
+
+function switchDoor(idx) {
+  if (idx < 0 || idx >= doorPanels.length) return;
+  doorPanels.forEach((p, i) => {
+    p.classList.toggle('active', i === idx);
+  });
+  document.querySelectorAll('.door-tab[data-door-tab]').forEach((tab, i) => {
+    tab.classList.toggle('active', i === idx);
+  });
+  activeDoorIndex = idx;
+  updateDoorTabs();
+}
+
+function addNewDoor() {
+  const doorNum = doorPanels.length + 1;
+  const mainForm = document.getElementById('main-form');
+  // Deep clone
+  const newPanel = mainForm.cloneNode(true);
+  newPanel.id = 'main-form-door-' + doorNum;
+  newPanel.classList.remove('active');
+  newPanel.setAttribute('data-door-index', doorPanels.length);
+
+  // Completely remove all canvas elements from clone (they can't be cloned with state)
+  newPanel.querySelectorAll('canvas').forEach(c => c.remove());
+
+  // Remove draw toolbars and sign buttons that reference canvas functions
+  newPanel.querySelectorAll('.draw-toolbar, .sign-clear-btn').forEach(el => el.remove());
+
+  // Clear door-specific fields (keep project/address/client)
+  const keepIds = ['field-projekt', 'field-adresse', 'field-datum', 'field-aufgenommen'];
+  newPanel.querySelectorAll('input[type="text"], input[type="number"], textarea').forEach(el => {
+    if (!keepIds.includes(el.id)) el.value = '';
+  });
+  newPanel.querySelectorAll('input[type="radio"], input[type="checkbox"]').forEach(el => el.checked = false);
+  newPanel.querySelectorAll('.foto-slot img').forEach(img => img.remove());
+  newPanel.querySelectorAll('.foto-slot .icon, .foto-slot label').forEach(el => { if(el) el.style.display = ''; });
+  newPanel.querySelectorAll('.din-card').forEach(c => c.classList.remove('selected'));
+  newPanel.querySelectorAll('[id="multidoor-block"]').forEach(b => { b.style.display = 'none'; });
+  newPanel.querySelectorAll('[id="multidoor-list"]').forEach(l => { l.innerHTML = ''; });
+
+  // Akkordeon-Status zurücksetzen: neue Tür startet wieder bei Section 1
+  const newSections = Array.from(newPanel.children).filter(el => el.classList && el.classList.contains('section'));
+  newSections.forEach((section, i) => {
+    section.classList.toggle('collapsed', i !== 0);
+    section.classList.remove('section-done');
+  });
+
+  // Fix duplicate IDs - prefix with door number
+  newPanel.querySelectorAll('[id]').forEach(el => {
+    el.id = 'door' + doorNum + '_' + el.id;
+  });
+
+  // Sync project fields from door 0
+  const syncFields = ['field-projekt', 'field-adresse', 'field-datum', 'field-aufgenommen'];
+  syncFields.forEach(fid => {
+    const src = document.getElementById(fid);
+    const dst = newPanel.querySelector('[id$="_' + fid + '"]') || newPanel.querySelector('#door' + doorNum + '_' + fid);
+    if (src && dst) dst.value = src.value;
+  });
+
+  // Auto-increment Pos.-Nr.
+  const posInput = newPanel.querySelector('.header-ids .id-field:last-child input');
+  if (posInput) posInput.value = String(doorNum).padStart(2, '0');
+
+  // Fix DIN card onclick handlers (they use hardcoded 'din-l'/'din-r' IDs)
+  const dinL = newPanel.querySelector('[id$="_din-l"]');
+  const dinR = newPanel.querySelector('[id$="_din-r"]');
+  if (dinL) dinL.onclick = null;
+  if (dinR) dinR.onclick = null;
+
+  // Fix GPS button
+  const gpsBtn = newPanel.querySelector('[id$="_gps-btn"]');
+  if (gpsBtn) gpsBtn.disabled = false;
+
+  mainForm.parentNode.insertBefore(newPanel, mainForm.nextSibling);
+  doorPanels.push(newPanel);
+
+  const newIdx = doorPanels.length - 1;
+  updateDoorTabs();
+  switchDoor(newIdx);
+  triggerAutosave();
+}
+
+function removeDoor(idx) {
+  if (doorPanels.length <= 1) return;
+  if (!confirm('Tür ' + (idx + 1) + ' löschen?')) return;
+  doorPanels[idx].remove();
+  doorPanels.splice(idx, 1);
+  // Re-index remaining panels
+  doorPanels.forEach((p, i) => p.setAttribute('data-door-index', i));
+  const newActive = Math.min(activeDoorIndex, doorPanels.length - 1);
+  activeDoorIndex = newActive;
+  updateDoorTabs();
+  switchDoor(newActive);
+  triggerAutosave();
+}
+
+function updateDoorTabs() {
+  const bar = document.getElementById('door-tabs-bar');
+  bar.querySelectorAll('[data-door-tab]').forEach(t => t.remove());
+  const addBtn = bar.querySelector('.add-tab');
+
+  doorPanels.forEach((panel, i) => {
+    const tab = document.createElement('button');
+    tab.className = 'door-tab' + (i === activeDoorIndex ? ' active' : '');
+    tab.setAttribute('data-door-tab', i);
+    tab.onclick = () => switchDoor(i);
+    // First tab is always "Tür aktuell", additional tabs are "Tür 2", "Tür 3" etc.
+    const labelText = (i === 0) ? 'Tür aktuell' : ('Tür ' + (i + 1));
+    const label = document.createTextNode(labelText + ' ');
+    tab.appendChild(label);
+    if (doorPanels.length > 1) {
+      const closeSpan = document.createElement('span');
+      closeSpan.className = 'tab-close';
+      closeSpan.textContent = '×';
+      closeSpan.onclick = (e) => { e.stopPropagation(); removeDoor(i); };
+      tab.appendChild(closeSpan);
+    }
+    bar.insertBefore(tab, addBtn);
+  });
+}
+
+// ── MASSKONTROLLE / PLAUSIBILITÄTSPRÜFUNG ────────────
+function checkMassPlausibility() {
+  const tuerBEl = document.getElementById('mi-tuerblatt-b');
+  const rohBEl = document.getElementById('mi-rohbau-b');
+  const warn = document.getElementById('val-mass-warn');
+  if (!tuerBEl || !rohBEl || !warn) return;
+
+  const tuerB = parseFloat(tuerBEl.value);
+  const rohB = parseFloat(rohBEl.value); // Rohbaumaß Breite
+  if (!isNaN(tuerB) && !isNaN(rohB) && tuerB > rohB) {
+    warn.classList.add('visible');
+    tuerBEl.classList.add('warn');
+  } else {
+    warn.classList.remove('visible');
+    tuerBEl.classList.remove('warn');
+  }
+}
+
+// Attach validation on input events
+document.addEventListener('input', (e) => {
+  if (e.target.classList.contains('mass-input')) {
+    checkMassPlausibility();
+  }
+  updateFilenamePreview();
+});
+
+// ── ROHRRAHMEN-VERBREITERUNG EIN-/AUSBLENDEN ──────────
+function syncRohrrahmenVisibility() {
+  const row = document.getElementById('row-rohrrahmen');
+  if (!row) return;
+  const checked = document.querySelector('input[name="tuerart"]:checked');
+  const isRohrrahmen = checked &&
+    checked.closest('.check-item') &&
+    /rohrrahmen/i.test(checked.closest('.check-item').textContent);
+  row.classList.toggle('cond-hidden', !isRohrrahmen);
+}
+document.addEventListener('change', (e) => {
+  if (e.target && e.target.name === 'tuerart') syncRohrrahmenVisibility();
+});
+document.addEventListener('DOMContentLoaded', syncRohrrahmenVisibility);
+
+// ── DATEINAME-VORSCHAU ────────────────────────────────
+function updateFilenamePreview() {
+  const projektEl = document.getElementById('field-projekt');
+  const projekt = (projektEl && projektEl.value.trim().replace(/[^a-zA-Z0-9äöüÄÖÜß\-_]/g, '_').substring(0, 20)) || 'Aufmass';
+  const dateFile = new Date().toISOString().slice(0, 10);
+  const preview = document.getElementById('pdf-filename-preview');
+  if (preview) preview.textContent = `Tuerblatt_${projekt}_${dateFile}.pdf`;
+}
+
+// ── PWA / INSTALL PROMPT ──────────────────────────────
+// (deferredInstallPrompt declared at top)
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  deferredInstallPrompt = e;
+  // Only show if not dismissed recently
+  const dismissed = localStorage.getItem('pwa_dismissed');
+  if (!dismissed || (Date.now() - parseInt(dismissed)) > 7 * 24 * 3600000) {
+    setTimeout(() => {
+      const prompt = document.getElementById('pwa-prompt');
+      if (prompt) prompt.classList.add('visible');
+    }, 4000);
+  }
+});
+
+function installPWA() {
+  const prompt = document.getElementById('pwa-prompt');
+  if (prompt) prompt.classList.remove('visible');
+  if (deferredInstallPrompt) {
+    deferredInstallPrompt.prompt();
+    deferredInstallPrompt.userChoice.then(() => { deferredInstallPrompt = null; });
+  }
+}
+
+function dismissPWA() {
+  const prompt = document.getElementById('pwa-prompt');
+  if (prompt) prompt.classList.remove('visible');
+  localStorage.setItem('pwa_dismissed', Date.now());
+}
+
+// ── SERVICE WORKER (Offline-Fähigkeit) ───────────────
+// Note: Blob-URL service workers are blocked on GitHub Pages (cross-origin).
+// PWA install prompt still works for "Add to Homescreen" without a SW.
+// A proper sw.js would need to be deployed alongside index.html.
+
+// ── ADMIN PANEL ───────────────────────────────────────
+function openAdmin() {
+  renderAdminList();
+  document.getElementById('admin-gate').classList.add('active');
+  document.getElementById('admin-status').textContent = '';
+  document.getElementById('admin-status').className = 'admin-status';
+}
+
+function closeAdmin() {
+  document.getElementById('admin-gate').classList.remove('active');
+}
+
+function renderAdminList() {
+  const list = document.getElementById('admin-employee-list');
+  list.innerHTML = '';
+  const codes = loadEmployeeCodes();
+  // If no saved codes yet, start with defaults
+  const entries = Object.keys(codes).length > 0 ? codes : DEFAULT_EMPLOYEE_CODES;
+  Object.entries(entries).forEach(([code, name]) => {
+    list.appendChild(adminCreateRow(code, name));
+  });
+}
+
+function adminCreateRow(code, name) {
+  const row = document.createElement('div');
+  row.className = 'admin-employee-row';
+  row.innerHTML =
+    '<input class="code-input" type="text" maxlength="10" placeholder="Code" value="' + escHtml(code) + '" style="letter-spacing:0.12em;">' +
+    '<input class="name-input" type="text" maxlength="40" placeholder="Name" value="' + escHtml(name) + '">' +
+    '<button class="admin-del-btn" onclick="this.parentElement.remove()" title="Entfernen">🗑</button>';
+  return row;
+}
+
+function adminAddRow() {
+  const list = document.getElementById('admin-employee-list');
+  list.appendChild(adminCreateRow('', ''));
+  const rows = list.querySelectorAll('.admin-employee-row');
+  const last = rows[rows.length - 1];
+  if (last) last.querySelector('.code-input').focus();
+}
+
+function adminSave() {
+  const list = document.getElementById('admin-employee-list');
+  const rows = list.querySelectorAll('.admin-employee-row');
+  const statusEl = document.getElementById('admin-status');
+  const newCodes = {};
+  let hasError = false;
+
+  rows.forEach(row => {
+    const code = row.querySelector('.code-input').value.trim();
+    const name = row.querySelector('.name-input').value.trim();
+    if (!code && !name) return;
+    if (!code || !name) { hasError = true; return; }
+    if (code === ADMIN_CODE) { hasError = true; return; }
+    newCodes[code] = name;
+  });
+
+  if (hasError) {
+    statusEl.textContent = '⚠ Bitte alle Felder ausfüllen. Admin-Code kann nicht als Mitarbeiter eingetragen werden.';
+    statusEl.className = 'admin-status err';
+    return;
+  }
+
+  if (Object.keys(newCodes).length === 0) {
+    statusEl.textContent = '⚠ Mindestens ein Mitarbeiter muss eingetragen sein.';
+    statusEl.className = 'admin-status err';
+    return;
+  }
+
+  saveEmployeeCodes(newCodes);
+  EMPLOYEE_CODES = newCodes;
+
+  statusEl.textContent = '✓ ' + Object.keys(newCodes).length + ' Mitarbeiter gespeichert.';
+  statusEl.className = 'admin-status ok';
+  setTimeout(closeAdmin, 1200);
+}
+
+function escHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;')
+    .replace(/"/g, '&quot;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;');
+}
+
+  (function() {
+    // Rechtsklick deaktivieren
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault(); e.stopPropagation(); return false;
+    }, true);
+
+    // Kopieren / Ausschneiden / Einfügen blockieren
+    ['copy','cut','paste'].forEach(function(ev) {
+      document.addEventListener(ev, function(e) {
+        e.preventDefault(); e.stopPropagation(); return false;
+      }, true);
+    });
+
+    // Drag blockieren
+    document.addEventListener('dragstart', function(e) {
+      e.preventDefault(); return false;
+    }, true);
+
+    // Textauswahl verhindern
+    document.addEventListener('selectstart', function(e) {
+      // Eingabefelder dürfen weiterhin selektiert werden
+      if (e.target.tagName !== 'INPUT' && e.target.tagName !== 'TEXTAREA') {
+        e.preventDefault(); return false;
+      }
+    }, true);
+
+    // Tastaturkürzel blockieren (F12, Strg+U, Strg+S, Strg+C, Strg+A, Strg+Shift+I/J/C)
+    document.addEventListener('keydown', function(e) {
+      const k = e.keyCode;
+      // F12
+      if (k === 123) { e.preventDefault(); return false; }
+      // Ctrl/Cmd combinations
+      if (e.ctrlKey || e.metaKey) {
+        // U = view source, S = save, C = copy, A = select all, P = print
+        if ([67,65,83,85,80].includes(k)) { e.preventDefault(); return false; }
+        // Shift + I / J / C = DevTools
+        if (e.shiftKey && [73,74,67].includes(k)) { e.preventDefault(); return false; }
+      }
+    }, true);
+
+  })();
+
+</script>
+</body>
+</html>
