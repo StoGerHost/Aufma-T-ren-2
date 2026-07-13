@@ -376,22 +376,6 @@
   .btn-office { background: #2E7D46; color: #fff; border-radius: 10px; font-weight: 700; }
   .btn-office:hover { background: #1F5C33; }
 
-  /* BÜRO-MAIL WARTESCHLANGE */
-  .mail-queue-banner {
-    display: flex; align-items: center; justify-content: space-between; gap: 12px;
-    background: #FFF4E5; border-bottom: 2px solid var(--orange);
-    padding: 10px 20px; font-size: 12px; color: #7A3E0A;
-  }
-  .mail-queue-text { display: flex; flex-direction: column; gap: 2px; }
-  .mail-queue-status { font-size: 10.5px; color: #9A5A1A; }
-  .mail-queue-btn {
-    background: var(--orange); color: #fff; border: none; border-radius: 8px;
-    padding: 10px 18px; font-size: 12px; font-weight: 700; cursor: pointer;
-    min-height: 40px; white-space: nowrap; transition: background 0.15s;
-  }
-  .mail-queue-btn:hover { background: #A84815; }
-  .mail-queue-btn:disabled { background: var(--border-strong); cursor: not-allowed; }
-
   .divider { height: 1px; background: var(--border); margin: 4px 0; }
 
   /* PDF EXPORT OVERLAY */
@@ -428,7 +412,6 @@
   @media print {
     body { background: #fff; padding: 0; }
     .actions { display: none; }
-    .mail-queue-banner { display: none !important; }
     .doc-header { border-radius: 0; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
     .form-wrapper { border-radius: 0; border: none; }
     .section-title { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
@@ -797,15 +780,6 @@
   </div>
 </div>
 <div class="hdr-stripe"></div>
-
-<!-- BÜRO-MAIL WARTESCHLANGE -->
-<div class="mail-queue-banner" id="mail-queue-banner" style="display:none;">
-  <div class="mail-queue-text">
-    <span id="mail-queue-count">0 Aufmaße warten auf Versand ans Büro</span>
-    <span class="mail-queue-status" id="mail-queue-status"></span>
-  </div>
-  <button type="button" id="mail-queue-send-btn" class="mail-queue-btn" onclick="attemptSendMailQueue()">Jetzt senden</button>
-</div>
 
 <div class="form-wrapper" id="main-form">
 
@@ -1465,7 +1439,7 @@
 
 <!-- FLOATING ACTIONS -->
 <div class="actions">
-  <button class="btn btn-office" onclick="checkPayment('queue')">🏢 An Büro senden</button>
+  <button class="btn btn-office" onclick="checkPayment('office')">🏢 An Büro senden</button>
   <button class="btn btn-email" onclick="checkPayment('email')">✉️ Per E-Mail versenden</button>
   <button class="btn btn-export" onclick="checkPayment('save')">⬇ PDF exportieren</button>
 </div>
@@ -1474,18 +1448,12 @@
 // ── TOP-LEVEL VARIABLE DECLARATIONS (hoisted to avoid TDZ errors) ──
 const AUTOSAVE_KEY = 'aufmass_autosave_v1';
 
-// ── BÜRO-MAIL-AUTOMATIK ────────────────────────────────
+// ── BÜRO-MAIL ───────────────────────────────────────────
 // Fallback-Adresse, falls auf diesem Gerät im Admin-Bereich noch keine
 // eigene Büro-Adresse hinterlegt wurde. Die tatsächlich verwendete
 // Adresse kommt aus getMailRecipient() (siehe unten).
 const FIXED_MAIL_RECIPIENT = 'buero@stober-tuertechnik.de';
 const MAIL_RECIPIENT_KEY = 'aufmass_mail_recipient';
-// TODO: URL der Supabase Edge Function (o.ä.) eintragen, die den
-// tatsächlichen E-Mail-Versand übernimmt. Ohne gültige URL landen
-// PDFs in der Warteschlange und werden nicht automatisch verschickt –
-// der Techniker sieht das am Banner-Hinweis "Versand fehlgeschlagen".
-const MAIL_SEND_ENDPOINT = 'https://DEIN-PROJEKT.functions.supabase.co/send-aufmass-mail';
-const MAIL_QUEUE_KEY = 'aufmass_mail_queue_v1';
 
 const AUTOSAVE_META_KEY = 'aufmass_autosave_meta';
 let autosaveTimer = null;
@@ -3050,20 +3018,28 @@ async function exportPDF(mode = 'save') {
     const dateFile = new Date().toISOString().slice(0,10);
     const filename = `Tuerblatt_${projekt}_${dateFile}.pdf`;
 
-    if (mode === 'queue') {
-      // Büro-Mail-Automatik: PDF wird lokal in eine Warteschlange gelegt
-      // und bei bestehender/zurückkehrender Verbindung automatisch an die
-      // feste Büro-Adresse gesendet (siehe attemptSendMailQueue()).
-      window.__pdfExportStep = 'In Warteschlange einreihen';
-      const pdfBase64 = pdf.output('datauristring').split(',')[1];
-      queueOfficeMail({
-        id: 'mail_' + Date.now() + '_' + Math.random().toString(36).slice(2, 8),
-        filename,
-        projekt,
-        auftrag: (document.querySelector('.header-ids .id-field:first-child input') || {}).value || '',
-        createdAt: new Date().toISOString(),
-        pdfBase64
-      });
+    if (mode === 'office') {
+      // "An Büro senden": PDF wird lokal heruntergeladen und gleichzeitig
+      // öffnet sich das Mailprogramm mit vorausgefüllter Büro-Adresse.
+      // Ein mailto:-Link kann keinen Anhang mitgeben (das erlaubt der
+      // mailto-Standard grundsätzlich nicht) - der Techniker muss das
+      // eben heruntergeladene PDF daher einmal manuell in der Mail
+      // anhängen, bevor er sendet.
+      window.__pdfExportStep = 'PDF speichern';
+      pdf.save(filename);
+
+      window.__pdfExportStep = 'Mailprogramm öffnen';
+      const auftragNr = (document.querySelector('.header-ids .id-field:first-child input') || {}).value || '';
+      const mailSubject = `Türblatt Aufmaß – ${projekt}${auftragNr ? ' (' + auftragNr + ')' : ''}`;
+      const mailBody =
+        `Aufmaßprotokoll "${filename}" wurde soeben heruntergeladen.\n\n` +
+        `Bitte die Datei aus den Downloads / der Dateien-App als Anhang hinzufügen und senden.\n\n` +
+        `Projekt: ${projekt}${auftragNr ? '\nAuftrags-Nr.: ' + auftragNr : ''}`;
+      const mailtoLink = `mailto:${getMailRecipient()}?subject=${encodeURIComponent(mailSubject)}&body=${encodeURIComponent(mailBody)}`;
+      // Kurze Verzögerung, damit der Download-Dialog sicher zuerst
+      // ausgelöst wird, bevor die Seite zur Mail-App navigiert.
+      await new Promise(r => setTimeout(r, 400));
+      window.location.href = mailtoLink;
     } else if (mode === 'email') {
       window.__pdfExportStep = 'Freigabedialog öffnen';
       const pdfBlob = pdf.output('blob');
@@ -3322,10 +3298,6 @@ function resetForm() {
     // Init Akkordeon (nur Section 1 offen, Rest eingeklappt)
     initSectionAccordion();
 
-    // Büro-Mail-Warteschlange: Banner anzeigen und ggf. direkt senden
-    updateMailQueueBanner();
-    attemptSendMailQueue();
-
     // Init autosave
     attachAutosaveListeners();
     // Check for autosave after a delay (lets the code gate appear first)
@@ -3517,119 +3489,13 @@ function restoreSectionAccordionState(collapsedSections) {
   (collapsedSections || []).forEach(s => s.classList.add('collapsed'));
 }
 
-// ── BÜRO-MAIL-WARTESCHLANGE ─────────────────────────────
-// Offline erfasste Aufmaße werden hier zwischengespeichert und beim
-// nächsten Online-Sein automatisch versucht zu versenden. Schlägt der
-// Versand fehl (z. B. Backend noch nicht eingerichtet, kein Netz),
-// bleibt der Eintrag in der Warteschlange und wird erneut versucht –
-// nichts geht verloren, es gibt nur eine sichtbare Wartemeldung.
-
-function getMailQueue() {
-  try {
-    return JSON.parse(localStorage.getItem(MAIL_QUEUE_KEY) || '[]');
-  } catch (e) {
-    return [];
-  }
-}
-
-function setMailQueue(queue) {
-  localStorage.setItem(MAIL_QUEUE_KEY, JSON.stringify(queue));
-  updateMailQueueBanner();
-}
-
-function queueOfficeMail(item) {
-  const queue = getMailQueue();
-  queue.push(item);
-  setMailQueue(queue);
-  // Direkt einen Versandversuch starten, falls bereits online -
-  // dann merkt der Techniker vom Warten im Idealfall gar nichts.
-  attemptSendMailQueue();
-}
-
+// ── BÜRO-MAIL ────────────────────────────────────────────
+// Liefert die im Admin-Bereich hinterlegte Büro-Adresse für dieses
+// Gerät, sonst die feste Fallback-Adresse aus der Konfiguration oben.
 function getMailRecipient() {
   const stored = (localStorage.getItem(MAIL_RECIPIENT_KEY) || '').trim();
   return stored || FIXED_MAIL_RECIPIENT;
 }
-
-async function sendMailQueueItem(item) {
-  const res = await fetch(MAIL_SEND_ENDPOINT, {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      to: getMailRecipient(),
-      subject: `Türblatt Aufmaß – ${item.projekt}${item.auftrag ? ' (' + item.auftrag + ')' : ''}`,
-      filename: item.filename,
-      pdfBase64: item.pdfBase64
-    })
-  });
-  if (!res.ok) throw new Error('HTTP ' + res.status);
-}
-
-let mailQueueSending = false;
-
-async function attemptSendMailQueue() {
-  if (mailQueueSending) return;
-  if (!navigator.onLine) { updateMailQueueBanner(); return; }
-  const queue = getMailQueue();
-  if (!queue.length) { updateMailQueueBanner(); return; }
-
-  mailQueueSending = true;
-  updateMailQueueBanner('sending');
-  let remaining = queue.slice();
-  let anyFailed = false;
-
-  for (const item of queue) {
-    try {
-      await sendMailQueueItem(item);
-      remaining = remaining.filter(q => q.id !== item.id);
-      // Nach jedem erfolgreichen Versand direkt speichern, damit bei
-      // Verbindungsabbruch mitten in der Liste nichts doppelt zählt.
-      localStorage.setItem(MAIL_QUEUE_KEY, JSON.stringify(remaining));
-    } catch (e) {
-      anyFailed = true;
-      console.warn('Büro-Mail-Versand fehlgeschlagen, bleibt in Warteschlange:', item.filename, e);
-    }
-  }
-
-  mailQueueSending = false;
-  updateMailQueueBanner(anyFailed ? 'error' : null);
-}
-
-function updateMailQueueBanner(state) {
-  const banner = document.getElementById('mail-queue-banner');
-  if (!banner) return;
-  const queue = getMailQueue();
-  const countEl = document.getElementById('mail-queue-count');
-  const statusEl = document.getElementById('mail-queue-status');
-  const btn = document.getElementById('mail-queue-send-btn');
-
-  if (!queue.length) {
-    banner.style.display = 'none';
-    return;
-  }
-  banner.style.display = 'flex';
-  if (countEl) {
-    countEl.textContent = queue.length === 1
-      ? '1 Aufmaß wartet auf Versand ans Büro'
-      : queue.length + ' Aufmaße warten auf Versand ans Büro';
-  }
-  if (statusEl) {
-    if (state === 'sending') {
-      statusEl.textContent = 'Sende …';
-    } else if (state === 'error' || !navigator.onLine) {
-      statusEl.textContent = navigator.onLine
-        ? 'Versand fehlgeschlagen – wird automatisch erneut versucht'
-        : 'Kein Netz – wird automatisch gesendet, sobald wieder online';
-    } else {
-      statusEl.textContent = '';
-    }
-  }
-  if (btn) btn.disabled = (state === 'sending');
-}
-
-// Beim Zurückkommen der Verbindung automatisch versuchen zu senden
-window.addEventListener('online', () => attemptSendMailQueue());
-
 
 
 function buildDoorTabsUI() {
@@ -3929,7 +3795,6 @@ function adminSave() {
   saveEmployeeCodes(newCodes);
   EMPLOYEE_CODES = newCodes;
   localStorage.setItem(MAIL_RECIPIENT_KEY, mailValue);
-  updateMailQueueBanner();
 
   statusEl.textContent = '✓ ' + Object.keys(newCodes).length + ' Mitarbeiter gespeichert.';
   statusEl.className = 'admin-status ok';
